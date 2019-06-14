@@ -6,6 +6,28 @@ import Rating from "Components/Rating";
 import { NavLink } from "react-router-dom";
 
 export default class SectionSidebar extends React.Component {
+
+    componentDidMount() {
+        fetch('http://localhost:8089/post/')
+            .then(
+                function (response) {
+                    if (response.status !== 200) {
+                        console.log('Looks like there was a problem. Status Code: ' +
+                            response.status);
+                        return;
+                    }
+
+                    // Examine the text in the response  
+                    response.json().then(function (data) {
+                        console.log(data);
+                    });
+                }
+            )
+            .catch(function (err) {
+                console.log('Fetch Error :-S', err);
+            });
+    }
+
     render() {
         const videoJsOptions = {
             autoplay: false,
@@ -92,7 +114,7 @@ export default class SectionSidebar extends React.Component {
                 </div>
 
                 <div className="side-bar-content">
-                    <h2><IntlMessages id="lp.sidebar.tour-title"/></h2>
+                    <h2><IntlMessages id="lp.sidebar.tour-title" /></h2>
                     <Card>
                         <CardBody className="p-0">
                             <div className="position-relative">
@@ -103,7 +125,7 @@ export default class SectionSidebar extends React.Component {
                 </div>
 
                 <div>
-                    <h2><IntlMessages id="lp.sidebar.review-title"/></h2>
+                    <h2><IntlMessages id="lp.sidebar.review-title" /></h2>
                     <Card>
                         <CardBody className="text-center pt-5 pb-5">
                             <div>
