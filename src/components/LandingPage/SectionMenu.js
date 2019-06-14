@@ -19,9 +19,8 @@ export class MenuMultipage extends Component {
   render() {
     return (
       <Container className="d-flex align-items-center justify-content-between">
-        <NavLink className="navbar-logo pull-left" to="/multipage-home">
+        <NavLink className="navbar-logo pull-left" to="/home">
           <span className="white" />
-          <span className="dark" />
         </NavLink>
         <Nav className="navbar-nav d-none d-lg-flex flex-row">
           <NavItem className={window.location.pathname === '/tin-tuc' ? 'active' : ''}>

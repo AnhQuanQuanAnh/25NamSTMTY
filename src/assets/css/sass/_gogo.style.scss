@@ -1,45 +1,4 @@
-/* Gogo Main Style 
 
-Table of Contents
-
-00.Variables and Imports
-01.Base
-02.Buttons
-03.Widths-Spacing
-04.Borders
-05.Badges
-06.Breadcrumb
-07.Tabs
-08.React Siema Carousel
-09.Navbar
-10.Menu
-11.Apps
-12.Chat App
-13.Survey App
-14.Todo App
-15.Main
-16.Cards
-17.Dashboard
-18.Calendar
-19.Datatable
-20.Alerts
-21.Forms
-22.Slider(Range)
-23.Navs
-24.Tooltip and popover
-25.Progress
-26.Rating
-27.Sortable
-28.Spinner
-29.Croppper
-30.Modal
-31.Authorization
-32.Html Editors
-33.Icons
-34.Floating Label
-35.Loading
-36.Context Menu
-*/
 
 /* 00.Variables and Imports */
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700");
@@ -75,11 +34,7 @@ $animation-time-short: 200ms;
 
 $border-radius: 0.1rem;
 
-$theme-color-purple: #922c88;
 $theme-color-blue: #145388;
-$theme-color-green: #576a3d;
-$theme-color-orange: #e2863b;
-$theme-color-red: #880a1f;
 
 $info-color: #3195a5;
 $success-color: #3e884f;
@@ -5668,34 +5623,12 @@ input:-webkit-autofill {
     }
   }
 
-  .theme-color-purple {
-    border: 3px solid $theme-color-purple;
-    background: $theme-color-purple;
-  }
 
   .theme-color-blue {
     border: 3px solid $theme-color-blue;
     background: $theme-color-blue;
   }
 
-  .theme-color-orange {
-    border: 3px solid $theme-color-orange;
-    background: $theme-color-orange;
-  }
-
-  .theme-color-green {
-    border: 3px solid $theme-color-green;
-    background: $theme-color-green;
-  }
-
-  .theme-color-red {
-    border: 3px solid $theme-color-red;
-    background: $theme-color-red;
-  }
-
-  &.shown {
-    transform: translate(0, -50%);
-  }
 }
 
 /* 34.Floating Label */

@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { Redirect, Route, Switch} from 'react-router-dom';
 import { IntlProvider} from 'react-intl';
 
-import ColorSwitcher from 'Components/ColorSwitcher'
 import {  NotificationContainer} from "Components/ReactNotifications";
 
 import { defaultStartPath } from 'Constants/defaultValues'
@@ -16,7 +15,6 @@ import register from 'Routes/layouts/register'
 import error from 'Routes/layouts/error'
 import forgotPassword from 'Routes/layouts/forgot-password'
 
-import MultipageHome from "Routes/landing-pages/multipage-home";
 import SinglepageHome from "Routes/landing-pages/singlepage-home";
 import About from "Routes/landing-pages/about";
 import AuthLogin from "Routes/landing-pages/auth-login";
@@ -75,7 +73,6 @@ class App extends Component {
 							authUser={user}
 							component={MainRoute}
 						/>
-        					<Route path={`/multipage-home`} component={MultipageHome} />
         					<Route path={`/singlepage-home`} component={SinglepageHome} />
         					<Route path={`/about`} component={About} />
         					<Route path={`/auth-login`} component={AuthLogin} />
@@ -105,7 +102,6 @@ class App extends Component {
 							<Route path={`/error`} component={error} />
 							<Redirect to="/error" />
 						</Switch>
-						<ColorSwitcher />
 					</Fragment>
 				</IntlProvider>
 			</Fragment>

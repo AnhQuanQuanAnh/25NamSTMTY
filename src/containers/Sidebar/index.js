@@ -583,9 +583,6 @@ class Sidebar extends Component {
                 data-parent="landingpage"
               >
                 <NavItem>
-                  <a href="/multipage-home" target="_blank"><i className="simple-icon-docs" />{" "}<IntlMessages id="menu.multipage-home" /></a>
-                </NavItem>
-                <NavItem>
                   <a href="/singlepage-home" target="_blank"><i className="simple-icon-doc" />{" "}<IntlMessages id="menu.singlepage-home" /></a>
                 </NavItem>
                 <NavItem>
@@ -602,12 +599,6 @@ class Sidebar extends Component {
                 </NavItem>
                 <NavItem>
                   <a href="/blog-detail" target="_blank"><i className="simple-icon-bubble" />{" "}<IntlMessages id="menu.blog-detail" /></a>
-                </NavItem>
-                <NavItem>
-                  <a href="/careers" target="_blank"><i className="simple-icon-people" />{" "}<IntlMessages id="menu.careers" /></a>
-                </NavItem>
-                <NavItem>
-                  <a href="/confirmation" target="_blank"><i className="simple-icon-check" />{" "}<IntlMessages id="menu.confirmation" /></a>
                 </NavItem>
                 <NavItem>
                   <a href="/contact" target="_blank"><i className="simple-icon-phone" />{" "}<IntlMessages id="menu.contact" /></a>
