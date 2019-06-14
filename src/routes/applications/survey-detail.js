@@ -23,8 +23,6 @@ import { Colxx } from "Components/CustomBootstrap";
 import { BreadcrumbItems } from "Components/BreadcrumbContainer";
 import { NavLink } from "react-router-dom";
 import classnames from "classnames";
-import SurveyQuestionBuilder from "Components/SurveyQuestionBuilder";
-import Sortable from "react-sortablejs";
 import { mapOrder } from "Util/Utils";
 import ApplicationMenu from "Components/ApplicationMenu";
 import PerfectScrollbar from "react-perfect-scrollbar";
@@ -325,36 +323,6 @@ const codingChartData = {
                     </Card>
                   </Colxx>
 
-                  <Colxx xxs="12" lg="8">
-                    <ul className="list-unstyled mb-4">
-                        {survey.questions.map((item, index) => {
-                          return (
-                            <li data-id={item.id} key={item.id}>
-                              <SurveyQuestionBuilder
-                                order={index}
-                                {...item}
-                                expanded={!item.title && true}
-                                deleteClick={id => {
-                                  this.deleteQuestion(id);
-                                }}
-                              />
-                            </li>
-                          );
-                        })}
-                    </ul>
-
-                    <div className="text-center">
-                      <Button
-                        outline
-                        color="primary"
-                        className="mt-3"
-                        onClick={() => this.addQuestion()}
-                      >
-                        <i className="simple-icon-plus btn-group-icon" /> Add
-                        Question
-                      </Button>
-                    </div>
-                  </Colxx>
                 </Row>
               </TabPane>
               <TabPane tabId="2">

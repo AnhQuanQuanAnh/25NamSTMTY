@@ -72,7 +72,7 @@ class Blog extends Component {
             <div className="content-container" ref={(x) => { this.home = x; }}>
               <div className="section home subpage">
                 <Container>
-                  <SubHero title={messages["lp.blogsection.title"]} detail={messages["lp.blogsection.detail"]} >
+                  <SubHero title={messages["cd.news.title"]} detail={messages["lp.blogsection.detail"]} >
                   </SubHero>
                   <Row>
                     <NavLink className="btn btn-circle btn-outline-semi-light hero-circle-button" to="#" onClick={(event) => this.onMenuClick("content", event)}>
@@ -98,7 +98,7 @@ class Blog extends Component {
                             <NavLink to="/blog-detail">
                               <h3 className="mb-4 listing-heading">
                                 <ResponsiveEllipsis
-                                  text={messages["lp.blogsection.title-1"]}
+                                  text={messages["cd.news.title-1"]}
                                   maxLine='2'
                                   ellipsis='...'
                                   trimRight
@@ -135,7 +135,7 @@ class Blog extends Component {
                             <NavLink to="/blog-detail">
                               <h3 className="mb-4 listing-heading">
                                 <ResponsiveEllipsis
-                                  text={messages["lp.blogsection.title-2"]}
+                                  text={messages["cd.news.title-2"]}
                                   maxLine='2'
                                   ellipsis='...'
                                   trimRight
@@ -171,7 +171,7 @@ class Blog extends Component {
                             <NavLink to="/blog-detail">
                               <h3 className="mb-4 listing-heading">
                                 <ResponsiveEllipsis
-                                  text={messages["lp.blogsection.title-3"]}
+                                  text={messages["cd.news.title-3"]}
                                   maxLine='2'
                                   ellipsis='...'
                                   trimRight
@@ -207,7 +207,7 @@ class Blog extends Component {
                             <NavLink to="/blog-detail">
                               <h3 className="mb-4 listing-heading ellipsis">
                                 <ResponsiveEllipsis
-                                  text={messages["lp.blogsection.title-4"]}
+                                  text={messages["cd.news.title-4"]}
                                   maxLine='2'
                                   ellipsis='...'
                                   trimRight
@@ -243,7 +243,7 @@ class Blog extends Component {
                             <NavLink to="/blog-detail">
                               <h3 className="mb-4 listing-heading">
                                 <ResponsiveEllipsis
-                                  text={messages["lp.blogsection.title-1"]}
+                                  text={messages["cd.news.title-1"]}
                                   maxLine='2'
                                   ellipsis='...'
                                   trimRight
@@ -279,7 +279,7 @@ class Blog extends Component {
                             <NavLink to="/blog-detail">
                               <h3 className="mb-4 listing-heading">
                                 <ResponsiveEllipsis
-                                  text={messages["lp.blogsection.title-3"]}
+                                  text={messages["cd.news.title-3"]}
                                   maxLine='2'
                                   ellipsis='...'
                                   trimRight

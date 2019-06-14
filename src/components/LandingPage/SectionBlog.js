@@ -16,7 +16,7 @@ class SectionBlog extends React.Component {
             <Fragment>
                 <Row>
                     <Colxx xxs={{ size: "12", offset: 0 }} lg={{ size: 8, offset: 2 }} className="text-center">
-                        <h1><IntlMessages id="lp.blogsection.title" /></h1>
+                        <h1><IntlMessages id="cd.news.title" /></h1>
                         <p>
                             <IntlMessages id="lp.blogsection.detail" />
                         </p>
@@ -37,7 +37,7 @@ class SectionBlog extends React.Component {
                                     <NavLink to="/blog-detail">
                                         <h3 className="mb-4 listing-heading">
                                             <ResponsiveEllipsis
-                                                text={messages["lp.blogsection.title-1"]} 
+                                                text={messages["cd.news.title-1"]} 
                                                 maxLine='2'
                                                 ellipsis='...'
                                                 trimRight
@@ -74,7 +74,7 @@ class SectionBlog extends React.Component {
                                     <NavLink to="/blog-detail">
                                         <h3 className="mb-4 listing-heading">
                                             <ResponsiveEllipsis
-                                                text={messages["lp.blogsection.title-2"]} 
+                                                text={messages["cd.news.title-2"]} 
                                                 maxLine='2'
                                                 ellipsis='...'
                                                 trimRight
@@ -110,7 +110,7 @@ class SectionBlog extends React.Component {
                                     <NavLink to="/blog-detail">
                                         <h3 className="mb-4 listing-heading">
                                             <ResponsiveEllipsis
-                                                text={messages["lp.blogsection.title-3"]}
+                                                text={messages["cd.news.title-3"]}
                                                 maxLine='2'
                                                 ellipsis='...'
                                                 trimRight
@@ -146,7 +146,7 @@ class SectionBlog extends React.Component {
                                     <NavLink to="/blog-detail">
                                         <h3 className="mb-4 listing-heading ellipsis">
                                             <ResponsiveEllipsis
-                                                text={messages["lp.blogsection.title-4"]}
+                                                text={messages["cd.news.title-4"]}
                                                 maxLine='2'
                                                 ellipsis='...'
                                                 trimRight

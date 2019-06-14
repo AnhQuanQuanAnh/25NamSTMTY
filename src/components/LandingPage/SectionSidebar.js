@@ -21,7 +21,7 @@ export default class SectionSidebar extends React.Component {
         return (
             <Fragment>
                 <div className="side-bar-content">
-                    <h2><IntlMessages id="lp.blogsection.title" /></h2>
+                    <h2><IntlMessages id="cd.news.title" /></h2>
 
                     <Card className="flex-row mb-4">
                         <div className="w-30 position-relative">
@@ -31,7 +31,7 @@ export default class SectionSidebar extends React.Component {
                         <div className="w-70 d-flex align-items-center">
                             <CardBody>
                                 <NavLink to="/blog-detail">
-                                    <h6 className="mb-0"><IntlMessages id="lp.blogsection.title-1" /></h6>
+                                    <h6 className="mb-0"><IntlMessages id="cd.news.title-1" /></h6>
                                 </NavLink>
                             </CardBody>
                         </div>
@@ -45,7 +45,7 @@ export default class SectionSidebar extends React.Component {
                         <div className="w-70 d-flex align-items-center">
                             <CardBody>
                                 <NavLink to="/blog-detail">
-                                    <h6 className="mb-0"><IntlMessages id="lp.blogsection.title-2" /></h6>
+                                    <h6 className="mb-0"><IntlMessages id="cd.news.title-2" /></h6>
                                 </NavLink>
                             </CardBody>
                         </div>
@@ -58,7 +58,7 @@ export default class SectionSidebar extends React.Component {
                         <div className="w-70 d-flex align-items-center">
                             <CardBody>
                                 <NavLink to="/blog-detail">
-                                    <h6 className="mb-0"><IntlMessages id="lp.blogsection.title-3" /></h6>
+                                    <h6 className="mb-0"><IntlMessages id="cd.news.title-3" /></h6>
                                 </NavLink>
                             </CardBody>
                         </div>
@@ -71,7 +71,7 @@ export default class SectionSidebar extends React.Component {
                         <div className="w-70 d-flex align-items-center">
                             <CardBody>
                                 <NavLink to="/blog-detail">
-                                    <h6 className="mb-0"><IntlMessages id="lp.blogsection.title-4" /></h6>
+                                    <h6 className="mb-0"><IntlMessages id="cd.news.title-4" /></h6>
                                 </NavLink>
                             </CardBody>
                         </div>
@@ -84,7 +84,7 @@ export default class SectionSidebar extends React.Component {
                         <div className="w-70 d-flex align-items-center">
                             <CardBody>
                                 <NavLink to="/blog-detail">
-                                    <h6 className="mb-0"><IntlMessages id="lp.blogsection.title-5" /></h6>
+                                    <h6 className="mb-0"><IntlMessages id="cd.news.title-5" /></h6>
                                 </NavLink>
                             </CardBody>
                         </div>
