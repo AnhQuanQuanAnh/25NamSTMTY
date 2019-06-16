@@ -1,15 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 const rootEl = document.getElementById("root");
-/*
-color options : 
-	 'light.purple'		'dark.purple'
-	 'light.blue'		  'dark.blue'
-	 'light.green'		'dark.green'
-	 'light.orange'		'dark.orange'
-	 'light.red'		  'dark.red'
-*/
-var color = 'light.purple';
+
+var color = 'light.blue';
 if (localStorage.getItem('themeColor')) {
     color = localStorage.getItem('themeColor');
 }

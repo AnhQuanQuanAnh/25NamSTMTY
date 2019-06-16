@@ -4,31 +4,44 @@ import IntlMessages from "Util/IntlMessages";
 import VideoPlayer from "Components/VideoPlayer"
 import Rating from "Components/Rating";
 import { NavLink } from "react-router-dom";
+import { cloneableGenerator } from "redux-saga/utils";
 
 export default class SectionSidebar extends React.Component {
 
-    componentDidMount() {
-        fetch('http://localhost:8089/post/')
-            .then(
-                function (response) {
-                    if (response.status !== 200) {
-                        console.log('Looks like there was a problem. Status Code: ' +
-                            response.status);
-                        return;
-                    }
+    constructor(props) {
+        super(props);
+        this.state = {
+            Items: []
+        }
+    }
 
-                    // Examine the text in the response  
-                    response.json().then(function (data) {
-                        console.log(data);
-                    });
+    componentDidMount() {
+        const url = "http://localhost:8089/post/";
+        fetch(url)
+            .then(response => {
+                if (response.status !== 200) {
+                    throw Error(response.statusText);
                 }
-            )
-            .catch(function (err) {
-                console.log('Fetch Error :-S', err);
-            });
+                return response.json();
+            })
+            .then(json => {
+                this.setState({
+                    Items: json
+                });
+            })
+            .catch(error => {
+                console.log('Fetch Error :-S', error);
+            })
     }
 
     render() {
+        console.log("data", this.state.Items.data);
+        const results = this.state.Items.data;
+        const posts = results.content;
+        console.log(posts);
+        const dataList = Object.keys(data).map((item, index) => {
+            return <h6 key={index} className="mb-0">{item.title}</h6>
+        });
         const videoJsOptions = {
             autoplay: false,
             controls: true,
@@ -44,7 +57,6 @@ export default class SectionSidebar extends React.Component {
             <Fragment>
                 <div className="side-bar-content">
                     <h2><IntlMessages id="cd.news.title" /></h2>
-
                     <Card className="flex-row mb-4">
                         <div className="w-30 position-relative">
                             <img className="card-img-left" src="/assets/img/landing-page/blog-thumb-1.jpg" alt="Card cap" />
@@ -53,7 +65,7 @@ export default class SectionSidebar extends React.Component {
                         <div className="w-70 d-flex align-items-center">
                             <CardBody>
                                 <NavLink to="/blog-detail">
-                                    <h6 className="mb-0"><IntlMessages id="cd.news.title-1" /></h6>
+                                    {dataList}
                                 </NavLink>
                             </CardBody>
                         </div>
