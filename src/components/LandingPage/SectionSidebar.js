@@ -11,7 +11,7 @@ export default class SectionSidebar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            Items: []
+            data: []
         }
     }
 
@@ -26,7 +26,7 @@ export default class SectionSidebar extends React.Component {
             })
             .then(json => {
                 this.setState({
-                    Items: json
+                    data: json.data.content
                 });
             })
             .catch(error => {
@@ -35,12 +35,23 @@ export default class SectionSidebar extends React.Component {
     }
 
     render() {
-        console.log("data", this.state.Items.data);
-        const results = this.state.Items.data;
-        const posts = results.content;
-        console.log(posts);
-        const dataList = Object.keys(data).map((item, index) => {
-            return <h6 key={index} className="mb-0">{item.title}</h6>
+        const { data } = this.state;
+        console.log("data", data);
+        const dataList = data.map((item, index) => {
+            // Base64 string data
+        const image = item.imagePath;
+            return <Card key={index} className="flex-row mb-4">
+                <div className="w-30 position-relative">
+                    <img className="card-img-left" src={`data:image/jpeg;base64,${image}`} alt="Card cap" />
+                </div>
+                <div className="w-70 d-flex align-items-center">
+                    <CardBody>
+                        <NavLink to="/blog-detail">
+                            <h3 className="mb-0"><IntlMessages id={item.title} /></h3>
+                        </NavLink>
+                    </CardBody>
+                </div>
+            </Card>
         });
         const videoJsOptions = {
             autoplay: false,
@@ -57,72 +68,7 @@ export default class SectionSidebar extends React.Component {
             <Fragment>
                 <div className="side-bar-content">
                     <h2><IntlMessages id="cd.news.title" /></h2>
-                    <Card className="flex-row mb-4">
-                        <div className="w-30 position-relative">
-                            <img className="card-img-left" src="/assets/img/landing-page/blog-thumb-1.jpg" alt="Card cap" />
-                            <span className="badge badge-pill badge-theme-1 position-absolute badge-top-left">NEW</span>
-                        </div>
-                        <div className="w-70 d-flex align-items-center">
-                            <CardBody>
-                                <NavLink to="/blog-detail">
-                                    {dataList}
-                                </NavLink>
-                            </CardBody>
-                        </div>
-                    </Card>
-
-                    <Card className="flex-row mb-4">
-                        <div className="w-30 position-relative">
-                            <img className="card-img-left" src="/assets/img/landing-page/blog-thumb-2.jpg" alt="Card cap" />
-                            <span className="badge badge-pill badge-theme-2 position-absolute badge-top-left">UPDATE</span>
-                        </div>
-                        <div className="w-70 d-flex align-items-center">
-                            <CardBody>
-                                <NavLink to="/blog-detail">
-                                    <h6 className="mb-0"><IntlMessages id="cd.news.title-2" /></h6>
-                                </NavLink>
-                            </CardBody>
-                        </div>
-                    </Card>
-
-                    <Card className="flex-row mb-4">
-                        <div className="w-30 position-relative">
-                            <img className="card-img-left" src="/assets/img/landing-page/blog-thumb-3.jpg" alt="Card cap" />
-                        </div>
-                        <div className="w-70 d-flex align-items-center">
-                            <CardBody>
-                                <NavLink to="/blog-detail">
-                                    <h6 className="mb-0"><IntlMessages id="cd.news.title-3" /></h6>
-                                </NavLink>
-                            </CardBody>
-                        </div>
-                    </Card>
-
-                    <Card className="flex-row mb-4">
-                        <div className="w-30 position-relative">
-                            <img className="card-img-left" src="/assets/img/landing-page/blog-thumb-4.jpg" alt="Card cap" />
-                        </div>
-                        <div className="w-70 d-flex align-items-center">
-                            <CardBody>
-                                <NavLink to="/blog-detail">
-                                    <h6 className="mb-0"><IntlMessages id="cd.news.title-4" /></h6>
-                                </NavLink>
-                            </CardBody>
-                        </div>
-                    </Card>
-
-                    <Card className="flex-row mb-4">
-                        <div className="w-30 position-relative">
-                            <img className="card-img-left" src="/assets/img/landing-page/blog-thumb-5.jpg" alt="Card cap" />
-                        </div>
-                        <div className="w-70 d-flex align-items-center">
-                            <CardBody>
-                                <NavLink to="/blog-detail">
-                                    <h6 className="mb-0"><IntlMessages id="cd.news.title-5" /></h6>
-                                </NavLink>
-                            </CardBody>
-                        </div>
-                    </Card>
+                    {dataList}
                 </div>
 
                 <div className="side-bar-content">
