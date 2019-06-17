@@ -31,6 +31,7 @@ import Prices from "Routes/landing-pages/prices";
 import Videos from "Routes/landing-pages/videos";
 import VideoDetail from "Routes/landing-pages/video-detail";
 import DocsDetails from "Routes/landing-pages/docs-details";
+import TinTucDetails from "Routes/landing-pages/tintuc-details";
 
 
 import 'Assets/css/vendor/bootstrap.min.css'
@@ -95,6 +96,8 @@ class App extends Component {
         					<Route path={`/videos`} component={Videos} />
         					<Route path={`/video-detail`} component={VideoDetail} />
         					<Route path={`/docs-details`} component={DocsDetails} />
+        					<Route path={`/tintuc-details`} component={TinTucDetails} />
+
 
 							<Route path={`/login`} component={login} />
 							<Route path={`/register`} component={register} />

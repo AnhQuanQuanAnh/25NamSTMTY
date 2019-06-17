@@ -39,14 +39,15 @@ export default class SectionSidebar extends React.Component {
         console.log("data", data);
         const dataList = data.map((item, index) => {
             // Base64 string data
-        const image = item.imagePath;
+            const image = item.imagePath;
+        
             return <Card key={index} className="flex-row mb-4">
                 <div className="w-30 position-relative">
                     <img className="card-img-left" src={`data:image/jpeg;base64,${image}`} alt="Card cap" />
                 </div>
                 <div className="w-70 d-flex align-items-center">
                     <CardBody>
-                        <NavLink to="/blog-detail">
+                        <NavLink to="/tintuc-details">
                             <h3 className="mb-0"><IntlMessages id={item.title} /></h3>
                         </NavLink>
                     </CardBody>
