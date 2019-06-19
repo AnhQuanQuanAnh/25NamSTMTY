@@ -86,7 +86,7 @@ class App extends Component {
         					<Route path={`/content`} component={Content} />
         					<Route path={`/docs`} component={Docs} />
 							<Route path={`/y-nghia-logo`} component={MeaningLogo} />
-							<Route path={`/tin-tuc`} component={Blog} />
+							<Route path={`/tin-tuc-test`} component={Blog} />
 							<Route path={`/gioi-thieu`} component={Blog} />
 							<Route path={`/ky-yeu-cong-doan`} component={Docs} />
 							<Route path={`/ky-yeu-nhom-ducdiem`} component={Docs} />
@@ -96,7 +96,7 @@ class App extends Component {
         					<Route path={`/videos`} component={Videos} />
         					<Route path={`/video-detail`} component={VideoDetail} />
         					<Route path={`/docs-details`} component={DocsDetails} />
-        					<Route path={`/tintuc-details`} component={TinTucDetails} />
+        					<Route path={`/tin-tuc/:id`} component={TinTucDetails} />
 
 
 							<Route path={`/login`} component={login} />

@@ -1,10 +1,8 @@
 import React, { Fragment } from "react";
 import { Card, CardBody } from "reactstrap";
 import IntlMessages from "Util/IntlMessages";
-import VideoPlayer from "Components/VideoPlayer"
 import Rating from "Components/Rating";
 import { NavLink } from "react-router-dom";
-import { cloneableGenerator } from "redux-saga/utils";
 
 export default class SectionSidebar extends React.Component {
 
@@ -36,10 +34,8 @@ export default class SectionSidebar extends React.Component {
 
     render() {
         const { data } = this.state;
-        console.log("data", data);
         const dataList = data.map((item, index) => {
-            // Base64 string data
-            const image = item.imagePath;
+            const image = item.image;
         
             return <Card key={index} className="flex-row mb-4">
                 <div className="w-30 position-relative">
@@ -47,40 +43,19 @@ export default class SectionSidebar extends React.Component {
                 </div>
                 <div className="w-70 d-flex align-items-center">
                     <CardBody>
-                        <NavLink to="/tintuc-details">
-                            <h3 className="mb-0"><IntlMessages id={item.title} /></h3>
+                        <NavLink to={`/tin-tuc/${item.id}`}>
+                            <h3 className="mb-0">{item.title}</h3>
                         </NavLink>
                     </CardBody>
                 </div>
             </Card>
         });
-        const videoJsOptions = {
-            autoplay: false,
-            controls: true,
-            className: "video-js side-bar-video",
-            poster: "/assets/img/landing-page/subpage-video-poster.jpg",
-            sources: [{
-                src: 'http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4',
-                type: 'video/mp4'
-            }]
-        }
 
         return (
             <Fragment>
                 <div className="side-bar-content">
                     <h2><IntlMessages id="cd.news.title" /></h2>
                     {dataList}
-                </div>
-
-                <div className="side-bar-content">
-                    <h2><IntlMessages id="lp.sidebar.tour-title" /></h2>
-                    <Card>
-                        <CardBody className="p-0">
-                            <div className="position-relative">
-                                <VideoPlayer {...videoJsOptions} />
-                            </div>
-                        </CardBody>
-                    </Card>
                 </div>
 
                 <div>

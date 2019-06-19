@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import {
   Container, Row, Card, CardBody
 } from "reactstrap";
@@ -16,40 +16,46 @@ import VideoPlayer from "Components/VideoPlayer"
 
 
 import { connect } from "react-redux";
-import {landingPageMobileMenuToggle,landingPageMobileMenuClose} from "Redux/actions";
+import { landingPageMobileMenuToggle, landingPageMobileMenuClose } from "Redux/actions";
 const mapStateToProps = ({ landingPage }) => {
-  const { isMobileMenuOpen} = landingPage;
+  const { isMobileMenuOpen } = landingPage;
   return { isMobileMenuOpen };
 }
 
-class TinTucDetails extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: []
-        }
+class TinTucDetails extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      news: null
     }
+  }
 
-    componentDidMount() {
-        const url = "http://localhost:8089/post/";
-        fetch(url)
-            .then(response => {
-                if (response.status !== 200) {
-                    throw Error(response.statusText);
-                }
-                return response.json();
-            })
-            .then(json => {
-                this.setState({
-                    data: json.data.content
-                });
-            })
-            .catch(error => {
-                console.log('Fetch Error :-S', error);
-            })
-    }
+  componentDidMount() {
+    console.log(this.props);
+    let id = this.props.match.params.id;
+    console.log("id", id);
+    const url = `http://localhost:8089/post/tin-tuc/${id}`;
+    fetch(url)
+      .then(response => {
+        if (response.status !== 200) {
+          throw Error(response.statusText);
+        }
+        return response.json();
+      })
+      .then(json => {
+        this.setState({
+          news: json.data
+        });
+        console.log(this.state.news);
+      })
+      .catch(error => {
+        console.log('Fetch Error :-S', error);
+      })
+  }
 
   render() {
+    // const test = this.props.route.id;
+    // console.log("id", test);
     const videoJsOptions = {
       autoplay: false,
       controls: true,
@@ -61,15 +67,17 @@ class TinTucDetails extends Component {
       }]
     }
 
+    const { news } = this.state.news;
+
     const { messages } = this.props.intl;
     return (
       <Fragment>
-        <div className={this.props.isMobileMenuOpen?"landing-page show-mobile-menu":"landing-page"}>
-        <MenuMultipageMobile  onUnmountingMenu={()=>this.onUnmountingMobileMenu()}></MenuMultipageMobile>
+        <div className={this.props.isMobileMenuOpen ? "landing-page show-mobile-menu" : "landing-page"}>
+          <MenuMultipageMobile onUnmountingMenu={() => this.onUnmountingMobileMenu()}></MenuMultipageMobile>
           <div className="main-container">
 
             <Headroom className="landing-page-nav" ref={(x) => { this.headroom = x; }}>
-            <MenuMultipage onMobileMenuToggle={()=>this.onMobileMenuToggle()}></MenuMultipage>
+              <MenuMultipage onMobileMenuToggle={() => this.onMobileMenuToggle()}></MenuMultipage>
             </Headroom>
 
             <div className="content-container" ref={(x) => { this.home = x; }}>
@@ -91,7 +99,7 @@ class TinTucDetails extends Component {
                     <Colxx xxs="12" lg="7">
                       <Card>
                         <CardBody className="p-0">
-                          <VideoPlayer {...videoJsOptions} />
+                          <img src={`data:image/jpeg;base64,${news.image}`} />
                         </CardBody>
                       </Card>
 
@@ -124,4 +132,4 @@ class TinTucDetails extends Component {
     );
   }
 }
-export default connect(mapStateToProps, {landingPageMobileMenuToggle,landingPageMobileMenuClose})(injectIntl(TinTucDetails))
+export default connect(mapStateToProps, { landingPageMobileMenuToggle, landingPageMobileMenuClose })(injectIntl(TinTucDetails))
