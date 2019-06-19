@@ -12,7 +12,6 @@ import SectionNewsletter from "Components/LandingPage/SectionNewsletter";
 import SectionSidebar from "Components/LandingPage/SectionSidebar";
 import { injectIntl } from 'react-intl';
 import { Colxx } from "Components/CustomBootstrap";
-import VideoPlayer from "Components/VideoPlayer"
 
 
 import { connect } from "react-redux";
@@ -23,16 +22,22 @@ const mapStateToProps = ({ landingPage }) => {
 }
 
 class TinTucDetails extends React.Component {
+
+  emptyObject = {
+    id: '',
+    title: '',
+    description: '',
+    image: '',
+  };
   constructor(props) {
     super(props);
     this.state = {
-      news: null
+      data: this.emptyObject
     }
   }
 
   componentDidMount() {
-    console.log(this.props);
-    let id = this.props.match.params.id;
+    const id = this.props.match.params.id;
     console.log("id", id);
     const url = `http://localhost:8089/post/tin-tuc/${id}`;
     fetch(url)
@@ -44,9 +49,8 @@ class TinTucDetails extends React.Component {
       })
       .then(json => {
         this.setState({
-          news: json.data
+          data: json.data
         });
-        console.log(this.state.news);
       })
       .catch(error => {
         console.log('Fetch Error :-S', error);
@@ -54,21 +58,7 @@ class TinTucDetails extends React.Component {
   }
 
   render() {
-    // const test = this.props.route.id;
-    // console.log("id", test);
-    const videoJsOptions = {
-      autoplay: false,
-      controls: true,
-      className: "video-js blog-video",
-      poster: "/assets/img/landing-page/subpage-video-poster.jpg",
-      sources: [{
-        src: 'http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4',
-        type: 'video/mp4'
-      }]
-    }
-
-    const { news } = this.state.news;
-
+    const { data } = this.state;
     const { messages } = this.props.intl;
     return (
       <Fragment>
@@ -99,7 +89,7 @@ class TinTucDetails extends React.Component {
                     <Colxx xxs="12" lg="7">
                       <Card>
                         <CardBody className="p-0">
-                          <img src={`data:image/jpeg;base64,${news.image}`} />
+                          <img src={`data:image/jpeg;base64,${data.image}`} />
                         </CardBody>
                       </Card>
 
