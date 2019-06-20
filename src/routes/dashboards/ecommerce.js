@@ -15,21 +15,11 @@ import { NavLink } from "react-router-dom";
 import { Colxx, Separator } from "Components/CustomBootstrap";
 import BreadcrumbContainer from "Components/BreadcrumbContainer";
 import ReactSiemaCarousel from "Components/ReactSiema/ReactSiemaCarousel";
-import { ThemeColors } from "Util/ThemeColors";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import BigCalendar from "react-big-calendar";
 import moment from "moment";
 import ReactTable from "react-table";
 import DataTablePagination from "Components/DataTables/pagination";
-import {
-  lineChartConfig,
-  doughnutChartConfig
-} from "Constants/chartConfig";
-
-import {
-  LineShadow,
-  DoughnutShadow,
-} from "Components/Charts";
 import eventsData from "Data/events.json";
 import ticketsData from "Data/tickets.json";
 import productsData from "Data/products.json";
@@ -215,9 +205,6 @@ export default class ECommerceDashboard extends Component {
                     <CardTitle>
                       <IntlMessages id="dashboards.sales" />
                     </CardTitle>
-                    <div className="dashboard-line-chart">
-                      <LineShadow {...lineChartConfig} />
-                    </div>
                   </CardBody>
                 </Card>
               </Colxx>
@@ -294,9 +281,6 @@ export default class ECommerceDashboard extends Component {
                 <CardTitle>
                   <IntlMessages id="dashboards.product-categories" />
                 </CardTitle>
-                <div className="dashboard-donut-chart">
-                  <DoughnutShadow {...doughnutChartConfig} />
-                </div>
               </CardBody>
             </Card>
           </Colxx>

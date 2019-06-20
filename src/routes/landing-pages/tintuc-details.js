@@ -81,6 +81,7 @@ class TinTucDetails extends React.Component {
 
   onNewsClick(id) {
     console.log("click news", id);
+    console.log("object");
     // var id = this.props.match.params.id;
     const url = `http://localhost:8089/post/tin-tuc/${id}`;
     fetch(url)

@@ -26,16 +26,10 @@ import CircularProgressbar from "react-circular-progressbar";
 import Select from "react-select";
 import CustomSelectInput from "Components/CustomSelectInput";
 
-import { LineShadow } from "Components/Charts";
 import commentsData from "Data/comments.json";
 import productsData from "Data/products.json";
 import cakeData from "Data/dashboard.cakes.json";
 
-
-import {
-  visitChartConfig,
-  conversionChartConfig,
-} from "Constants/chartConfig";
 
 const comments = commentsData.data;
 const dataTableData = productsData.data;
@@ -332,90 +326,6 @@ export default class ContentDashboard extends Component {
                   </PerfectScrollbar>
                 </div>
               </CardBody>
-            </Card>
-          </Colxx>
-        </Row>
-
-        <Row>
-          <Colxx sm="12" md="6" className="mb-4">
-            <Card className="dashboard-filled-line-chart">
-              <CardBody>
-                <div className="float-left float-none-xs">
-                  <div className="d-inline-block">
-                    <h5 className="d-inline">
-                    <IntlMessages id="dashboards.website-visits" />
-                    </h5>
-                    <span className="text-muted text-small d-block">
-                      <IntlMessages id="dashboards.unique-visitors" />
-                    </span>
-                  </div>
-                </div>
-
-                <div className="btn-group float-right float-none-xs mt-2">
-                  <UncontrolledDropdown>
-                    <DropdownToggle
-                      caret
-                      color="primary"
-                      className="btn-xs"
-                      outline
-                    >
-                      <IntlMessages id="dashboards.this-week" />
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>
-                        <IntlMessages id="dashboards.last-week" />
-                      </DropdownItem>
-                      <DropdownItem>
-                        <IntlMessages id="dashboards.this-month" />
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
-                </div>
-              </CardBody>
-
-              
-              <div className="chart card-body pt-0">
-                <LineShadow {...visitChartConfig} />
-              </div>
-            </Card>
-          </Colxx>
-          <Colxx sm="12" md="6" className="mb-4">
-            <Card className="dashboard-filled-line-chart">
-              <CardBody>
-                <div className="float-left float-none-xs">
-                  <div className="d-inline-block">
-                    <h5 className="d-inline">
-                    <IntlMessages id="dashboards.conversion-rates" />
-                    </h5>
-                    <span className="text-muted text-small d-block">
-                    <IntlMessages id="dashboards.per-session" />
-                    </span>
-                  </div>
-                </div>
-                <div className="btn-group float-right float-none-xs mt-2">
-                  <UncontrolledDropdown>
-                  <DropdownToggle
-                      caret
-                      color="secondary"
-                      className="btn-xs"
-                      outline
-                    >
-                      <IntlMessages id="dashboards.this-week" />
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>
-                        <IntlMessages id="dashboards.last-week" />
-                      </DropdownItem>
-                      <DropdownItem>
-                        <IntlMessages id="dashboards.this-month" />
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
-                </div>
-              </CardBody>
-              <div className="chart card-body pt-0">
-                <LineShadow {...conversionChartConfig} />
-              </div>
             </Card>
           </Colxx>
         </Row>

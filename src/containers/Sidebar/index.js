@@ -357,12 +357,6 @@ class Sidebar extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to="/app/dashboards/analytics">
-                    <i className="simple-icon-pie-chart" />{" "}
-                    <IntlMessages id="menu.analytics" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
                   <NavLink to="/app/dashboards/ecommerce">
                     <i className="simple-icon-basket-loaded" />{" "}
                     <IntlMessages id="menu.ecommerce" />
@@ -495,12 +489,6 @@ class Sidebar extends Component {
                   <NavLink to="/app/ui/carousel">
                     <i className="simple-icon-picture" />{" "}
                     <IntlMessages id="menu.carousel" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/charts">
-                    <i className="simple-icon-chart" />{" "}
-                    <IntlMessages id="menu.charts" />
                   </NavLink>
                 </NavItem>
                 <NavItem>

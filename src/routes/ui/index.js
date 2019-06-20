@@ -6,7 +6,6 @@ import badges from './badges';
 import buttons from './buttons';
 import cards from './cards';
 import carousel from './carousel';
-import charts from './charts';
 import collapse from './collapse';
 import dropdowns from './dropdowns';
 import editors from './editors';
@@ -36,7 +35,6 @@ export default class Ui extends Component {
                 <Route path={`${match.url}/buttons`} component={buttons} />
                 <Route path={`${match.url}/cards`} component={cards} />
                 <Route path={`${match.url}/carousel`} component={carousel} />
-                <Route path={`${match.url}/charts`} component={charts} />
                 <Route path={`${match.url}/collapse`} component={collapse} />
                 <Route path={`${match.url}/dropdowns`} component={dropdowns} />
                 <Route path={`${match.url}/editors`} component={editors} />

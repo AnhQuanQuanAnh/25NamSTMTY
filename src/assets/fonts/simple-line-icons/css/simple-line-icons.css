@@ -121,7 +121,6 @@
 .simple-icon-share,
 .simple-icon-rocket,
 .simple-icon-question,
-.simple-icon-pie-chart,
 .simple-icon-pencil,
 .simple-icon-note,
 .simple-icon-loop,
@@ -147,7 +146,6 @@
 .simple-icon-volume-off,
 .simple-icon-calendar,
 .simple-icon-bulb,
-.simple-icon-chart,
 .simple-icon-ban,
 .simple-icon-bubble,
 .simple-icon-camrecorder,
@@ -545,9 +543,6 @@
 .simple-icon-question:before {
   content: "\e05d";
 }
-.simple-icon-pie-chart:before {
-  content: "\e05e";
-}
 .simple-icon-pencil:before {
   content: "\e05f";
 }
@@ -622,9 +617,6 @@
 }
 .simple-icon-bulb:before {
   content: "\e076";
-}
-.simple-icon-chart:before {
-  content: "\e077";
 }
 .simple-icon-ban:before {
   content: "\e07c";

@@ -2736,10 +2736,6 @@ main {
 
 /* 17.Dashboard*/
 
-.dashboard-line-chart {
-  height: 283px;
-}
-
 .dashboard-quick-post {
   min-height: 263px;
 }
@@ -2754,42 +2750,6 @@ main {
 
 .dashboard-list-with-user {
   height: 270px;
-}
-
-.dashboard-donut-chart {
-  height: 270px;
-}
-
-.dashboard-small-chart {
-  height: 150px;
-
-  .chart {
-    height: 75px;
-  }
-
-  .lead {
-    font-size: 1.4rem;
-  }
-}
-
-.dashboard-small-chart-analytics {
-  height: 180px;
-
-  .chart {
-    height: 85px;
-  }
-
-  .lead {
-    font-size: 1.4rem;
-  }
-}
-
-.dashboard-filled-line-chart {
-  height: 340px;
-
-  .chart {
-    height: 200px;
-  }
 }
 
 .dashboard-sq-banner {
@@ -5577,10 +5537,6 @@ input:-webkit-autofill {
   @include respond-below(xs) {
     width: 50%;
   }
-}
-
-.chart-container {
-  height: 300px;
 }
 
 .theme-colors {

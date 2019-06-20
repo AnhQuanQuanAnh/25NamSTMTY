@@ -27,29 +27,16 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 import { Colxx, Separator } from "Components/CustomBootstrap";
 import BreadcrumbContainer from "Components/BreadcrumbContainer";
 import { CalendarToolbar } from "Components/Calendar/CalendarToolbar";
-import { PolarShadow, LineShadow, SmallLineChart } from "Components/Charts";
-import {
-  visitChartConfig,
-  conversionChartConfig,
-  lineChartConfig,
-  polarChartConfig,
-  smallChartData1,
-  smallChartData2,
-  smallChartData3,
-  smallChartData4
-} from "Constants/chartConfig";
 
 import BigCalendar from "react-big-calendar";
 import moment from "moment";
 import ReactTable from "react-table";
 import CircularProgressbar from "react-circular-progressbar";
-import { Chart } from "react-chartjs-2";
 import ReactSiemaCarousel from "Components/ReactSiema/ReactSiemaCarousel";
 import Rating from "Components/Rating";
 import DataTablePagination from "Components/DataTables/pagination";
 import Sortable from "react-sortablejs";
 
-import "chartjs-plugin-datalabels";
 import "react-circular-progressbar/dist/styles.css";
 import "react-perfect-scrollbar/dist/css/styles.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
@@ -61,8 +48,6 @@ import logsData from "Data/logs.json";
 import productsData from "Data/products.json";
 import profileStatusData from "Data/dashboard.profile.status.json";
 import cakeData from "Data/dashboard.cakes.json";
-
-Chart.defaults.global.plugins.datalabels.display = false;
 
 const selectData = [
   { label: "Chocolate", value: "chocolate", key: 0 },
@@ -233,9 +218,6 @@ class DefaultDashboard extends Component {
                     <CardTitle>
                       <IntlMessages id="dashboards.sales" />
                     </CardTitle>
-                    <div className="dashboard-line-chart">
-                      <LineShadow {...lineChartConfig} />
-                    </div>
                   </CardBody>
                 </Card>
               </Colxx>
@@ -309,9 +291,6 @@ class DefaultDashboard extends Component {
                 <CardTitle>
                   <IntlMessages id="dashboards.product-categories" />
                 </CardTitle>
-                <div className="dashboard-donut-chart">
-                  <PolarShadow {...polarChartConfig} />
-                </div>
               </CardBody>
             </Card>
           </Colxx>
@@ -603,91 +582,6 @@ class DefaultDashboard extends Component {
         </Sortable>
 
         <Row>
-          <Colxx sm="12" md="6" className="mb-4">
-            <Card className="dashboard-filled-line-chart">
-              <CardBody>
-                <div className="float-left float-none-xs">
-                  <div className="d-inline-block">
-                    <h5 className="d-inline">
-                      <IntlMessages id="dashboards.website-visits" />
-                    </h5>
-                    <span className="text-muted text-small d-block">
-                      <IntlMessages id="dashboards.unique-visitors" />
-                    </span>
-                  </div>
-                </div>
-
-                <div className="btn-group float-right float-none-xs mt-2">
-                  <UncontrolledDropdown>
-                    <DropdownToggle
-                      caret
-                      color="primary"
-                      className="btn-xs"
-                      outline
-                    >
-                      <IntlMessages id="dashboards.this-week" />
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>
-                        <IntlMessages id="dashboards.last-week" />
-                      </DropdownItem>
-                      <DropdownItem>
-                        <IntlMessages id="dashboards.this-month" />
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
-                </div>
-              </CardBody>
-
-              <div className="chart card-body pt-0">
-                <LineShadow {...visitChartConfig} />
-              </div>
-            </Card>
-          </Colxx>
-          <Colxx sm="12" md="6" className="mb-4">
-            <Card className="dashboard-filled-line-chart">
-              <CardBody>
-                <div className="float-left float-none-xs">
-                  <div className="d-inline-block">
-                    <h5 className="d-inline">
-                      <IntlMessages id="dashboards.conversion-rates" />
-                    </h5>
-                    <span className="text-muted text-small d-block">
-                      <IntlMessages id="dashboards.per-session" />
-                    </span>
-                  </div>
-                </div>
-
-                <div className="btn-group float-right float-none-xs mt-2">
-                  <UncontrolledDropdown>
-                    <DropdownToggle
-                      caret
-                      color="secondary"
-                      className="btn-xs"
-                      outline
-                    >
-                      <IntlMessages id="dashboards.this-week" />
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>
-                        <IntlMessages id="dashboards.last-week" />
-                      </DropdownItem>
-                      <DropdownItem>
-                        <IntlMessages id="dashboards.this-month" />
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
-                </div>
-              </CardBody>
-
-              <div className="chart card-body pt-0">
-                <LineShadow {...conversionChartConfig} />
-              </div>
-            </Card>
-          </Colxx>
-        </Row>
-
-        <Row>
           <Colxx lg="12" md="6" xl="4">
             <Row>
               <Colxx lg="4" xl="12" className="mb-4">
@@ -827,36 +721,6 @@ class DefaultDashboard extends Component {
           </Colxx>
 
           <Colxx lg="6" xl="4" className="mb-4">
-            <Row>
-              <Colxx xxs="6" className="mb-4">
-                <Card className="dashboard-small-chart">
-                  <CardBody>
-                    <SmallLineChart {...smallChartData1} />
-                  </CardBody>
-                </Card>
-              </Colxx>
-              <Colxx xxs="6" className="mb-4">
-                <Card className="dashboard-small-chart">
-                  <CardBody>
-                    <SmallLineChart {...smallChartData2} />
-                  </CardBody>
-                </Card>
-              </Colxx>
-              <Colxx xxs="6" className="mb-4">
-                <Card className="dashboard-small-chart">
-                  <CardBody>
-                    <SmallLineChart {...smallChartData3} />
-                  </CardBody>
-                </Card>
-              </Colxx>
-              <Colxx xxs="6" className="mb-4">
-                <Card className="dashboard-small-chart">
-                  <CardBody>
-                    <SmallLineChart {...smallChartData4} />
-                  </CardBody>
-                </Card>
-              </Colxx>
-            </Row>
 
             <Card className="dashboard-top-rated">
               <CardBody>

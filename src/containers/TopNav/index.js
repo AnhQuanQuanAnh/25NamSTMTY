@@ -304,10 +304,6 @@ class TopNav extends Component {
                     <i className="iconsmind-Pantone d-block" />{" "}
                     <IntlMessages id="menu.ui" />
                   </NavLink>
-                  <NavLink to="/app/ui/charts" className="icon-menu-item">
-                    <i className="iconsmind-Bar-Chart d-block" />{" "}
-                    <IntlMessages id="menu.charts" />
-                  </NavLink>
                   <NavLink
                     to="/app/applications/chat"
                     className="icon-menu-item"

@@ -1,37 +1,3 @@
-/* Gogo Language Texts
-
-Table of Contents
-
-01.General
-02.User Login, Logout, Register
-03.Menu
-04.Dashboards
-05.Layouts
-06.Applications
-  06.01.Chat
-  06.02.Survey
-  06.03.Todo
-07.UI
-  07.01.Alerts
-  07.02.Badges
-  07.03.Buttons
-  07.04.Cards
-  07.05.Carousel
-  07.06.Charts
-  07.07.Collapse
-  07.08.Dropdowns
-  07.09.Editors
-  07.10.Forms
-  07.11.Form Components
-  07.12.Icons
-  07.13.Input Groups
-  07.14.Jumbotron
-  07.15.Modal
-  07.16.Navigation
-  07.17.Popover & Tooltip
-  07.18.Sortable
-08.LandingPage
-*/
 
 module.exports = {
   /* 01.General */
@@ -50,68 +16,6 @@ module.exports = {
   "user.reset-password-button": "RESET",
   "user.buy": "BUY",
   "user.username": "Username",
-
-  /* 03.Menu */
-  "menu.app": "Home",
-  "menu.dashboards": "Dashboards",
-  "menu.default": "Default",
-  "menu.analytics": "Analytics",
-  "menu.ecommerce": "Ecommerce",
-  "menu.content": "Content",
-  "menu.layouts": "Layouts",
-  "menu.data-list": "Quần",
-  "menu.thumb-list": "Thumb List",
-  "menu.image-list": "Image List",
-  "menu.details": "Details",
-  "menu.search": "Search",
-  "menu.login": "Login",
-  "menu.register": "Register",
-  "menu.forgot-password": "Forgot Password",
-  "menu.error": "Error",
-  "menu.applications": "Applications",
-  "menu.todo": "To-do List",
-  "menu.survey": "Survey",
-  "menu.chat": "Chat",
-  "menu.ui": "UI",
-  "menu.alerts": "Alerts",
-  "menu.badges": "Badges",
-  "menu.buttons": "Buttons",
-  "menu.cards": "Cards",
-  "menu.carousel": "Carousel",
-  "menu.charts": "Charts",
-  "menu.collapse": "Collapse",
-  "menu.dropdowns": "Dropdowns",
-  "menu.editors": "Editors",
-  "menu.forms": "Forms",
-  "menu.form-components": "Form Components",
-  "menu.icons": "Icons",
-  "menu.input-groups": "Input Groups",
-  "menu.jumbotron": "Jumbotron",
-  "menu.modal": "Modal",
-  "menu.navigation": "Navigation",
-  "menu.popover-tooltip": "Popover & Tooltip",
-  "menu.sortable": "Sortable",
-  "menu.menu": "Menu",
-  "menu.subhidden": "Subhidden",
-  "menu.hidden": "Hidden",
-  "menu.visible": "Visible",
-
-  "menu.landingpage": "Landing Page",
-  "menu.multipage-home": "Multipage Home",
-  "menu.singlepage-home": "Singlepage Home",
-  "menu.about": "About",
-  "menu.auth-login": "Auth Login",
-  "menu.auth-register": "Auth Register",
-  "menu.blog": "Blog",
-  "menu.blog-detail": "Blog Detail",
-  "menu.careers": "Careers",
-  "menu.confirmation": "Confirmation",
-  "menu.contact": "Contact",
-  "menu.docs": "Docs",
-  "menu.features": "Features",
-  "menu.prices": "Prices",
-  "menu.videos": "Videos",
-
 
   /* 04.Dashboards */
   "dashboards.pending-orders": "Pending Orders",
@@ -352,18 +256,6 @@ module.exports = {
   "carousel.single": "Carousel Single",
   "carousel.without-controls": "Carousel Without Controls",
 
-  /* 07.06.Charts */
-  "charts.line": "Line Chart",
-  "charts.polar": "Polar Chart",
-  "charts.area": "Area Chart",
-  "charts.scatter": "Scatter Chart",
-  "charts.bar": "Bar Chart",
-  "charts.radar": "Radar Chart",
-  "charts.pie": "Pie Chart",
-  "charts.doughnut": "Doughnut Chart",
-  "charts.shadow": "Shadow",
-  "charts.no-shadow": "No Shadow",
-
   /* 07.07.Collapse */
   "collapse.basic": "Basic",
   "collapse.toggle": "Toggle",
@@ -583,8 +475,6 @@ module.exports = {
 
   "lp.featurecarousel.title-1": "Tasteful Design",
   "lp.featurecarousel.detail-1": "User experience principles at the heart of the design process.",
-  "lp.featurecarousel.title-2": "Superfine Charts",
-  "lp.featurecarousel.detail-2": "Charts that looks good with color, opacity, border and shadow.",
   "lp.featurecarousel.title-3": "Two Panels Menu",
   "lp.featurecarousel.detail-3": "A two part menu that looks good and does the job well.",
   "lp.featurecarousel.title-4": "Layouts for the Job",

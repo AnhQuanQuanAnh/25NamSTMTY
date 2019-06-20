@@ -19,16 +19,6 @@ import {
   CardImg
 } from "reactstrap";
 import Rating from "Components/Rating";
-import { SmallLineChart } from "Components/Charts";
-import {
-  smallChartData1,
-  smallChartData2,
-  smallChartData3,
-  smallChartData4
-} from "Constants/chartConfig";
-
-import { LineShadow } from "Components/Charts";
-import { areaChartConfig } from "Constants/chartConfig";
 
 import { NavLink } from "react-router-dom";
 import CircularProgressbar from "react-circular-progressbar";
@@ -237,52 +227,6 @@ export default class DetailsLayout extends Component {
                   </Colxx>
 
                   <Colxx xxs="12" lg="8">
-                    <Row>
-                      <Colxx xxs="6" className="mb-4">
-                        <Card className="dashboard-small-chart">
-                          <CardBody>
-                            <SmallLineChart {...smallChartData1} />
-                          </CardBody>
-                        </Card>
-                      </Colxx>
-                      <Colxx xxs="6" className="mb-4">
-                        <Card className="dashboard-small-chart">
-                          <CardBody>
-                            <SmallLineChart {...smallChartData2} />
-                          </CardBody>
-                        </Card>
-                      </Colxx>
-                      <Colxx xxs="6" className="mb-4">
-                        <Card className="dashboard-small-chart">
-                          <CardBody>
-                            <SmallLineChart {...smallChartData3} />
-                          </CardBody>
-                        </Card>
-                      </Colxx>
-                      <Colxx xxs="6" className="mb-4">
-                        <Card className="dashboard-small-chart">
-                          <CardBody>
-                            <SmallLineChart {...smallChartData4} />
-                          </CardBody>
-                        </Card>
-                      </Colxx>
-                    </Row>
-
-                    <Card className="mb-4">
-                        <CardImg
-                            top
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT35cQyZ8BlvYh0m-dCuk9-UjXNkK1j1lPu4bFxZx0whaKE6Plyww"
-                        />
-                      <CardBody>
-                        <CardTitle>
-                        <IntlMessages id="layouts.popularity" />
-                        </CardTitle>
-                        <div className="chart-container">
-                          <LineShadow {...areaChartConfig} />
-                        </div>
-                      </CardBody>
-                    </Card>
-
                     <Card className="mb-4">
                       <CardBody>
                         <CardTitle>

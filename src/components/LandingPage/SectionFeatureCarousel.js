@@ -38,20 +38,6 @@ export default class SectionFeatureCarousel extends React.Component {
                             <Card>
                                 <CardBody className="text-center">
                                     <div>
-                                        <i className="iconsmind-Line-Chart2 large-icon"></i>
-                                        <h5 className="mb-0 font-weight-semibold"><IntlMessages id="lp.featurecarousel.title-2"/></h5>
-                                    </div>
-                                    <div>
-                                        <p className="detail-text"><IntlMessages id="lp.featurecarousel.detail-2"/></p>
-                                    </div>
-                                    <NavLink className="btn btn-link font-weight-semibold" to="/features"><IntlMessages id="lp.featurecarousel.view"/></NavLink>
-                                </CardBody>
-                            </Card>
-                        </div>
-                        <div className="pr-3 pl-3">
-                            <Card>
-                                <CardBody className="text-center">
-                                    <div>
                                         <i className="iconsmind-Three-ArrowFork large-icon"></i>
                                         <h5 className="mb-0 font-weight-semibold"><IntlMessages id="lp.featurecarousel.title-3"/></h5>
                                     </div>
