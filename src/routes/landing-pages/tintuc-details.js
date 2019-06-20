@@ -6,13 +6,10 @@ import { MenuMultipage, MenuMultipageMobile } from "Components/LandingPage/Secti
 import Headroom from 'react-headroom';
 import scrollToComponent from 'react-scroll-to-component';
 import { NavLink } from "react-router-dom";
-import SubHero from "Components/LandingPage/SectionHeroSub";
 import Footer from "Components/LandingPage/SectionFooter";
-import SectionNewsletter from "Components/LandingPage/SectionNewsletter";
 import SectionSidebar from "Components/LandingPage/SectionSidebar";
 import { injectIntl } from 'react-intl';
 import { Colxx } from "Components/CustomBootstrap";
-
 
 import { connect } from "react-redux";
 import { landingPageMobileMenuToggle, landingPageMobileMenuClose } from "Redux/actions";
@@ -27,18 +24,64 @@ class TinTucDetails extends React.Component {
     id: '',
     title: '',
     description: '',
-    image: '',
+    image: ''
   };
+
   constructor(props) {
     super(props);
     this.state = {
-      data: this.emptyObject
+      news: this.emptyObject
+    }
+    this.onMenuClick = this.onMenuClick.bind(this);
+    this.onNewsClick = this.onNewsClick.bind(this);
+  }
+
+  onMobileMenuToggle() {
+    this.props.landingPageMobileMenuToggle()
+  }
+  onUnmountingMobileMenu() {
+    this.props.landingPageMobileMenuClose()
+    return true;
+  }
+
+  onMenuClick(ref, event) {
+    event.preventDefault();
+    let scroller;
+    if (ref !== "home") {
+      scroller = scrollToComponent(this[ref], { align: 'top', offset: 60 });
+      scroller.on('end', () => {
+        this.headroom.unpin();
+        this.props.landingPageMobileMenuClose();
+      });
+    } else {
+      scrollToComponent(this[ref], { align: 'top' });
     }
   }
 
   componentDidMount() {
-    const id = this.props.match.params.id;
-    console.log("id", id);
+    scrollToComponent(this["home"], { align: 'top', duration: 10 });
+    const urlProps = this.props.match.url;
+    const url = `http://localhost:8089/post${urlProps}`;
+    fetch(url)
+      .then(response => {
+        if (response.status !== 200) {
+          throw Error(response.statusText);
+        }
+        return response.json();
+      })
+      .then(json => {
+        this.setState({
+          news: json.data
+        });
+      })
+      .catch(error => {
+        console.log('Fetch Error :-S', error);
+      })
+  }
+
+  onNewsClick(id) {
+    console.log("click news", id);
+    // var id = this.props.match.params.id;
     const url = `http://localhost:8089/post/tin-tuc/${id}`;
     fetch(url)
       .then(response => {
@@ -58,8 +101,8 @@ class TinTucDetails extends React.Component {
   }
 
   render() {
-    const { data } = this.state;
-    const { messages } = this.props.intl;
+    const { news } = this.state;
+    const des = news.description;
     return (
       <Fragment>
         <div className={this.props.isMobileMenuOpen ? "landing-page show-mobile-menu" : "landing-page"}>
@@ -73,8 +116,6 @@ class TinTucDetails extends React.Component {
             <div className="content-container" ref={(x) => { this.home = x; }}>
               <div className="section home subpage">
                 <Container>
-                  <SubHero title={messages["lp.videodetails.title"]} detail={messages["lp.videodetails.detail"]} >
-                  </SubHero>
                   <Row>
                     <NavLink className="btn btn-circle btn-outline-semi-light hero-circle-button" to="#" onClick={(event) => this.onMenuClick("content", event)}>
                       <i className="simple-icon-arrow-down"></i>
@@ -89,25 +130,20 @@ class TinTucDetails extends React.Component {
                     <Colxx xxs="12" lg="7">
                       <Card>
                         <CardBody className="p-0">
-                          <img src={`data:image/jpeg;base64,${data.image}`} />
+                          <img className="card-img-left" src={`data:image/jpeg;base64,${news.image}`} />
                         </CardBody>
                       </Card>
 
-                      <p className="mt-5 mb-0" dangerouslySetInnerHTML={{ __html: messages["lp.blogdetail.content"] }}>
+                      <p className="mt-5 mb-0" dangerouslySetInnerHTML={{ __html: `${des}` }}>
                       </p>
                     </Colxx>
 
                     <Colxx xxs="12" lg={{ size: 4, offset: 1 }} className="side-bar">
-                      <SectionSidebar />
+                      <SectionSidebar onClick={() => {this.onNewsClick(this.props.match.params.id)}}>
+                      </SectionSidebar>
                     </Colxx>
 
                   </Row>
-                </Container>
-              </div>
-
-              <div className="section background background-no-bottom mb-0">
-                <Container>
-                  <SectionNewsletter />
                 </Container>
               </div>
 
