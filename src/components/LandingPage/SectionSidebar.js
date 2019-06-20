@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { Card, CardBody } from "reactstrap";
 import IntlMessages from "Util/IntlMessages";
-import Rating from "Components/Rating";
 import { NavLink } from "react-router-dom";
 
 export default class SectionSidebar extends React.Component {
@@ -56,25 +55,6 @@ export default class SectionSidebar extends React.Component {
                 <div className="side-bar-content">
                     <h2><IntlMessages id="cd.news.title" /></h2>
                     {dataList}
-                </div>
-
-                <div>
-                    <h2><IntlMessages id="lp.sidebar.review-title" /></h2>
-                    <Card>
-                        <CardBody className="text-center pt-5 pb-5">
-                            <div>
-                                <img alt="review profile" className="img-thumbnail border-0 rounded-circle mb-4 list-thumbnail mx-auto" src="/assets/img/profile-pic-l-2.jpg" />
-                                <h5 className="mb-0 font-weight-semibold color-theme-1 mb-3"><IntlMessages id="lp.reviews.review-name-3" /></h5>
-                                <Rating total={5} rating={5} interactive={false} />
-                                <p className="text-muted text-small"><IntlMessages id="lp.reviews.review-type-3" /></p>
-                            </div>
-                            <div className="pl-3 pr-3 pt-3 pb-0 flex-grow-1 d-flex align-items-center">
-                                <p className="mb-0 detail-text">
-                                    <IntlMessages id="lp.reviews.review-detail-3" />
-                                </p>
-                            </div>
-                        </CardBody>
-                    </Card>
                 </div>
             </Fragment>
         );
