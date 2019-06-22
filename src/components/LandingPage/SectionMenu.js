@@ -57,7 +57,7 @@ export class MenuMultipage extends Component {
               </DropdownMenu>
             </UncontrolledDropdown>
           </NavItem>
-          <NavItem className={window.location.pathname === '/ky-yeu-cong-doan' || window.location.pathname === '/ky-yeu-nhom-ducdiem' || window.location.pathname === '/ky-yeu-nhom-khoaphuong' ? 'active' : ''}>
+          <NavItem className={window.location.pathname === '/ky-yeu-cong-doan' || window.location.pathname === '/ky-yeu-nhom-duc-diem' || window.location.pathname === '/ky-yeu-nhom-khoa-phuong' ? 'active' : ''}>
             <UncontrolledDropdown>
               <DropdownToggle tag="a" caret color="empty" href="#">
                 <IntlMessages id="cd.menu.yearbook" />
@@ -66,20 +66,17 @@ export class MenuMultipage extends Component {
                 <NavLink to="/ky-yeu-cong-doan" className="dropdown-item">
                   <IntlMessages id="cd.menu.yb_cd" />
                 </NavLink>
-                <NavLink to="/ky-yeu-nhom-ducdiem" className="dropdown-item">
+                <NavLink to="/ky-yeu-nhom-duc-diem" className="dropdown-item">
                   <IntlMessages id="cd.menu.yb_ducdiem" />
                 </NavLink>
-                <NavLink to="/videos" className="dropdown-item">
+                <NavLink to="/ky-yeu-nhom-quan-uyen" className="dropdown-item">
                   <IntlMessages id="cd.menu.yb_quanuyen" />
                 </NavLink>
-                <NavLink to="/contact" className="dropdown-item">
+                <NavLink to="/ky-yeu-nhom-quan-uyen" className="dropdown-item">
                   <IntlMessages id="cd.menu.yb_trungphuc" />
                 </NavLink>
-                <NavLink to="/ky-yeu-nhom-khoaphuong" className="dropdown-item">
+                <NavLink to="/ky-yeu-nhom-khoa-phuong" className="dropdown-item">
                   <IntlMessages id="cd.menu.yb_khoaphuong" />
-                </NavLink>
-                <NavLink to="/contact" className="dropdown-item">
-                  <IntlMessages id="cd.menu.yb_hungquynh" />
                 </NavLink>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -172,16 +169,6 @@ export class MenuMultipageMobile extends React.Component {
                 </NavLink>
               </DropdownMenu>
             </UncontrolledDropdown>
-          </NavItem>
-          <NavItem className={window.location.pathname === '/prices' ? 'active' : ''}>
-            <NavLink to="/prices">
-              <IntlMessages id="cd.menu.about" />
-            </NavLink>
-          </NavItem>
-          <NavItem className={window.location.pathname === '/blog' ? 'active' : ''}>
-            <NavLink to="/blog">
-              <IntlMessages id="cd.menu.contact" />
-            </NavLink>
           </NavItem>
         </Nav>
 

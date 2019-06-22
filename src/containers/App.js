@@ -21,7 +21,6 @@ import AuthLogin from "Routes/landing-pages/auth-login";
 import AuthRegister from "Routes/landing-pages/auth-register";
 import Blog from "Routes/landing-pages/blog";
 import BlogDetail from "Routes/landing-pages/blog-detail";
-import Careers from "Routes/landing-pages/careers";
 import Confirmation from "Routes/landing-pages/confirmation";
 import Contact from "Routes/landing-pages/contact";
 import Content from "Routes/landing-pages/content";
@@ -32,6 +31,8 @@ import Videos from "Routes/landing-pages/videos";
 import VideoDetail from "Routes/landing-pages/video-detail";
 import DocsDetails from "Routes/landing-pages/docs-details";
 import TinTucDetails from "Routes/landing-pages/tintuc-details";
+import KyYeu from "Routes/landing-pages/ky-yeu";
+import TinTuc from "Routes/landing-pages/tin-tuc";
 
 
 import 'Assets/css/vendor/bootstrap.min.css'
@@ -80,7 +81,6 @@ class App extends Component {
         					<Route path={`/auth-register`} component={AuthRegister} />
         					<Route path={`/blog`} component={Blog} />
         					<Route path={`/home`} component={BlogDetail} />
-        					<Route path={`/careers`} component={Careers} />
         					<Route path={`/confirmation`} component={Confirmation} />
         					<Route path={`/contact`} component={Contact} />
         					<Route path={`/content`} component={Content} />
@@ -89,15 +89,22 @@ class App extends Component {
 							<Route path={`/tin-tuc-test`} component={Blog} />
 							<Route path={`/gioi-thieu`} component={Blog} />
 							<Route path={`/ky-yeu-cong-doan`} component={Docs} />
-							<Route path={`/ky-yeu-nhom-ducdiem`} component={Docs} />
-							<Route path={`/ky-yeu-nhom-khoaphuong`} component={Docs} />
+							<Route path={`/ky-yeu-nhom-duc-diem`} component={KyYeu} />
+							<Route path={`/ky-yeu-nhom-khoa-phuong`} component={KyYeu} />
+							<Route path={`/ky-yeu-nhom-quan-uyen`} component={KyYeu} />
+							<Route path={`/ky-yeu-nhom-chin-bich`} component={KyYeu} />
+							<Route path={`/ky-yeu-nhom-hung-quynh`} component={KyYeu} />
+							<Route path={`/ky-yeu-nhom-linh-giang`} component={KyYeu} />
+							<Route path={`/ky-yeu-nhom-daonguyen`} component={KyYeu} />
+							<Route path={`/ky-yeu-nhom-diemanh`} component={KyYeu} />
+							<Route path={`/ky-yeu-nhom-anhtuan`} component={KyYeu} />
 							<Route path={`/tu-lieu-phim-anh`} component={Videos} />
         					<Route path={`/prices`} component={Prices} />
         					<Route path={`/videos`} component={Videos} />
         					<Route path={`/video-detail`} component={VideoDetail} />
         					<Route path={`/docs-details`} component={DocsDetails} />
         					<Route path={`/tin-tuc/:id`} component={TinTucDetails} />
-
+        					<Route path={`/tin-tuc`} component={TinTuc} />
 
 							<Route path={`/login`} component={login} />
 							<Route path={`/register`} component={register} />

@@ -186,9 +186,6 @@ const surveyData=[];
                         <p className="text-muted text-small mb-2">Name</p>
                         <p className="mb-3">{survey.title}</p>
 
-                        <p className="text-muted text-small mb-2">Details</p>
-                        <p className="mb-3" dangerouslySetInnerHTML={{ __html: survey.detail }}/>
-
                         <p className="text-muted text-small mb-2">Category</p>
                         <p className="mb-3">{survey.category}</p>
 

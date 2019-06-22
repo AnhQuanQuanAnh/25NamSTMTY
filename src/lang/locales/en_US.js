@@ -108,32 +108,6 @@ module.exports = {
 
   /* 06.Applications */
 
-  /* 06.01.Chat */
-  "chat.messages": "Messages",
-  "chat.contacts": "Contacts",
-  "chat.saysomething": "Say something..",
-
-
-  /* 06.02.Survey */
-  "survey.delete": "Delete",
-  "survey.edit": "Edit",
-  "survey.add-new": "ADD NEW",
-  "survey.add-new-title": "Add New Survey",
-  "survey.title": "Title",
-  "survey.category": "Category",
-  "survey.label": "Label",
-  "survey.status": "Status",
-  "survey.cancel": "Cancel",
-  "survey.submit": "Submit",
-  "survey.another-action": "Another action",
-  "survey.display-options": "Display Options",
-  "survey.orderby": "Order By : ",
-  "survey.all-surveys": "All Surveys",
-  "survey.completed-surveys": "Completed Surveys",
-  "survey.categories": "Categories",
-  "survey.active-surveys": "Active Surveys",
-  "survey.labels": "Labels",
-
   /* 06.03.Todo */
   "todo.add-new": "ADD NEW",
   "todo.add-new-title": "Add New Todo",
@@ -526,7 +500,6 @@ module.exports = {
   "lp.footer.menu-1": "COMPANY",
   "lp.footer.menu-1-1": "About",
   "lp.footer.menu-1-2": "Blog",
-  "lp.footer.menu-1-3": "Careers",
   "lp.footer.menu-1-4": "Contact",
   "lp.footer.menu-2": "PRODUCT",
   "lp.footer.menu-2-1": "Features",
@@ -726,26 +699,6 @@ module.exports = {
 
   "lp.sidebar.tour-title": "Take a Tour",
   "lp.sidebar.review-title": "Recent Review",
-
-  "lp.careers.title": "Career Opportunities",
-  "lp.careers.detail": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override low hanging fruit to identify a ballpark.",
-  "lp.careers-herd.title": "Join the Herd",
-  "lp.careers-herd.detail": "Data citizen-centered granular, effective altruism white paper engaging; best practices thought partnership optimism. Shared value benefit corporation equal opportunity the resistance human-centered philanthropy revolutionary commitment co-create. Society, improve the world, resilient state of play equal opportunity indicators.",
-
-  "lp.careers-positions.title": "Open Positions",
-  "lp.careers-positions.detail": "Data citizen-centered granular, effective altruism white paper engaging; best practices thought partnership optimism.",
-  "lp.careers-positions.title-1": "Sr. Product Designer",
-  "lp.careers-positions.location-1": "New York",
-  "lp.careers-positions.tag-1": "DESIGN",
-  "lp.careers-positions.title-2": "Sr. Art Director",
-  "lp.careers-positions.location-2": "London",
-  "lp.careers-positions.tag-2": "DESIGN",
-  "lp.careers-positions.title-3": "Sr. Mobile Developer(React Native)",
-  "lp.careers-positions.location-3": "New York",
-  "lp.careers-positions.tag-3": "DEVELOPMENT",
-  "lp.careers-positions.title-4": "Sr. Mobile Developer(Android)",
-  "lp.careers-positions.location-4": "New York",
-  "lp.careers-positions.tag-4": "DEVELOPMENT",
 
   "lp.videodetails.title": "Dynamically Target Capital",
   "lp.videodetails.detail": "Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.",
