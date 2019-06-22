@@ -33,7 +33,6 @@ class TinTucDetails extends React.Component {
       news: this.emptyObject
     }
     this.onMenuClick = this.onMenuClick.bind(this);
-    this.onNewsClick = this.onNewsClick.bind(this);
   }
 
   onMobileMenuToggle() {
