@@ -18,7 +18,6 @@ import {
   CardTitle,
   CardImg
 } from "reactstrap";
-import Rating from "Components/Rating";
 
 import { NavLink } from "react-router-dom";
 import CircularProgressbar from "react-circular-progressbar";
@@ -149,13 +148,6 @@ export default class DetailsLayout extends Component {
                         </p>
 
                         <p className="text-muted text-small mb-2">
-                        <IntlMessages id="layouts.rating" />
-                        </p>
-                        <div className="mb-3">
-                          <Rating total={5} rating={5} interactive={false} />
-                        </div>
-
-                        <p className="text-muted text-small mb-2">
                         <IntlMessages id="layouts.price" />
                         </p>
                         <p className="mb-3">$8,14</p>
@@ -240,23 +232,6 @@ export default class DetailsLayout extends Component {
                               className="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall"
                             />
                           </NavLink>
-                          <div className="pl-3 pr-2">
-                            <NavLink to="#">
-                              <p className="font-weight-medium mb-0">
-                                Very tasty, thank you.{" "}
-                              </p>
-                              <p className="text-muted mb-1 text-small">
-                                Mayra Sibley | 17.09.2018 - 04:45
-                              </p>
-                              <div className="form-group mb-0">
-                                <Rating
-                                  total={5}
-                                  rating={5}
-                                  interactive={false}
-                                />
-                              </div>
-                            </NavLink>
-                          </div>
                         </div>
 
                         <div className="d-flex flex-row mb-3 pb-3 border-bottom">
@@ -267,24 +242,6 @@ export default class DetailsLayout extends Component {
                               className="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall"
                             />
                           </NavLink>
-                          <div className="pl-3 pr-2">
-                            <NavLink to="#">
-                              <p className="font-weight-medium mb-0">
-                                This cake was delightful to eat. Please keep
-                                them coming.
-                              </p>
-                              <p className="text-muted mb-1 text-small">
-                                Barbera Castiglia | 15.08.2018 - 01:18
-                              </p>
-                              <div className="form-group mb-0">
-                                <Rating
-                                  total={5}
-                                  rating={5}
-                                  interactive={false}
-                                />
-                              </div>
-                            </NavLink>
-                          </div>
                         </div>
 
                         <div className="d-flex flex-row mb-3 pb-3 border-bottom">
@@ -295,23 +252,6 @@ export default class DetailsLayout extends Component {
                               className="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall"
                             />
                           </NavLink>
-                          <div className="pl-3 pr-2">
-                            <NavLink to="#">
-                              <p className="font-weight-medium mb-0">
-                                Your cake is bad and you should feel bad.
-                              </p>
-                              <p className="text-muted mb-1 text-small">
-                                Bao Hathaway | 26.07.2018 - 11:14
-                              </p>
-                              <div className="form-group mb-0">
-                                <Rating
-                                  total={5}
-                                  rating={2}
-                                  interactive={false}
-                                />
-                              </div>
-                            </NavLink>
-                          </div>
                         </div>
 
                         <div className="d-flex flex-row mb-3 pb-3 border-bottom">
@@ -322,23 +262,6 @@ export default class DetailsLayout extends Component {
                               className="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall"
                             />
                           </NavLink>
-                          <div className="pl-3 pr-2">
-                            <NavLink to="#">
-                              <p className="font-weight-medium mb-0">
-                                Very original recipe!
-                              </p>
-                              <p className="text-muted mb-1 text-small">
-                                Lenna Majeed | 17.06.2018 - 09:20
-                              </p>
-                              <div className="form-group mb-0">
-                                <Rating
-                                  total={5}
-                                  rating={5}
-                                  interactive={false}
-                                />
-                              </div>
-                            </NavLink>
-                          </div>
                         </div>
 
                         <div className="d-flex flex-row">
@@ -349,23 +272,6 @@ export default class DetailsLayout extends Component {
                               className="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall"
                             />
                           </NavLink>
-                          <div className="pl-3 pr-2">
-                            <NavLink to="#">
-                              <p className="font-weight-medium mb-0">
-                                Nah, did not like it much.
-                              </p>
-                              <p className="text-muted mb-1 text-small">
-                                Brynn Bragg | 12.04.2018 - 12:45
-                              </p>
-                              <div className="form-group mb-0">
-                                <Rating
-                                  total={5}
-                                  rating={3}
-                                  interactive={false}
-                                />
-                              </div>
-                            </NavLink>
-                          </div>
                         </div>
                       </CardBody>
                     </Card>

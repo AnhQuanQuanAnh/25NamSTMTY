@@ -20,7 +20,6 @@ import moment from "moment";
 import TagsInput from "react-tagsinput";
 import Switch from "rc-switch";
 import ReactAutosuggest from "Components/ReactAutosuggest";
-import Rating from "Components/Rating";
 import { SliderTooltip, RangeTooltip } from "Components/SliderTooltip";
 import FineUploaderTraditional from "fine-uploader-wrappers";
 import Gallery from "react-fine-uploader";
@@ -571,32 +570,6 @@ class FormsUi extends Component {
                       defaultValue={1000}
                       className="mb-5"
                     />
-                  </Colxx>
-                </Row>
-              </CardBody>
-            </Card>
-          </Colxx>
-        </Row>
-
-        <Row className="mb-4">
-          <Colxx xxs="12">
-            <Card>
-              <CardBody>
-                <CardTitle>
-                  <IntlMessages id="form-components.rating" />
-                </CardTitle>
-                <Row>
-                  <Colxx xxs="12" sm="6">
-                    <label>
-                      <IntlMessages id="form-components.interactive" />
-                    </label>
-                    <Rating total={5} rating={0} onRate={rating => {}} />
-                  </Colxx>
-                  <Colxx xxs="12" sm="6">
-                    <label>
-                      <IntlMessages id="form-components.readonly" />
-                    </label>
-                    <Rating total={5} rating={5} interactive={false} />
                   </Colxx>
                 </Row>
               </CardBody>

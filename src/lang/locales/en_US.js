@@ -94,7 +94,6 @@ module.exports = {
   "layouts.header": "Header",
   "layouts.details": "DETAILS",
   "layouts.orders": "ORDERS",
-  "layouts.rating": "Rating",
 
   "layouts.ingredients": "Ingredients",
   "layouts.is-vegan": "Is Vegan",
@@ -325,7 +324,6 @@ module.exports = {
   "form-components.slider": "Slider",
   "form-components.double-slider": "Double Slider",
   "form-components.single-slider": "Single Slider",
-  "form-components.rating": "Rating",
   "form-components.interactive": "Interactive",
   "form-components.readonly": "Readonly",
   "form-components.type-a-cake": "Type a Cake",

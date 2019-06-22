@@ -2433,77 +2433,6 @@ button {
   }
 }
 
-/* 13.Survey App*/
-.survey-app {
-  .answers {
-    .badge {
-      color: $secondary-color;
-      font-size: 13px;
-      padding-left: 0.75em;
-      padding-right: 0.75em;
-    }
-
-    input {
-      padding-right: 70px;
-    }
-  }
-
-  .question {
-    &.edit-quesiton {
-      .edit-mode {
-        display: block;
-      }
-
-      .view-mode {
-        display: none;
-      }
-
-      .view-button {
-        display: inline-block;
-      }
-
-      .edit-button {
-        display: none;
-      }
-    }
-
-    &.view-quesiton {
-      .edit-mode {
-        display: none;
-      }
-
-      .view-mode {
-        display: block;
-      }
-
-      .view-button {
-        display: none;
-      }
-
-      .edit-button {
-        display: inline-block;
-      }
-    }
-  }
-
-  .survey-question-types {
-    .btn-group-icon {
-      font-size: 21px;
-      line-height: 28px;
-    }
-
-    .btn {
-      padding-bottom: 0.3rem;
-    }
-  }
-}
-
-.input-icons {
-  position: absolute;
-  right: 0;
-  top: 9px;
-}
-
 /* 14.Todo App*/
 .heading-icon {
   font-size: 20px;
@@ -5044,43 +4973,6 @@ input:-webkit-autofill {
 
   &:hover {
     background-position: right top;
-  }
-}
-
-/* 26.Rating */
-.br-theme-bootstrap-stars .br-widget a.br-active:after {
-  color: $theme-color-1;
-}
-
-.br-theme-bootstrap-stars .br-widget a.br-selected:after {
-  color: $theme-color-1;
-}
-
-.react-rater {
-  display: block !important;
-  font-size: 16px;
-  color: $separator-color;
-}
-
-.react-rater-star {
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  font-family: "simple-line-icons";
-  color: $separator-color;
-  margin-right: 3px;
-  font-size: 18px;
-
-  &.is-active,
-  &.will-be-active {
-    color: $theme-color-1;
-  }
-
-  &:after {
-    content: "\e09b";
   }
 }
 

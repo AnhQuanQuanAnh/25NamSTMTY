@@ -33,7 +33,6 @@ import moment from "moment";
 import ReactTable from "react-table";
 import CircularProgressbar from "react-circular-progressbar";
 import ReactSiemaCarousel from "Components/ReactSiema/ReactSiemaCarousel";
-import Rating from "Components/Rating";
 import DataTablePagination from "Components/DataTables/pagination";
 import Sortable from "react-sortablejs";
 
@@ -747,8 +746,6 @@ class DefaultDashboard extends Component {
                       Cheesecake
                     </h6>
 
-                    <Rating total={5} rating={5} interactive={false} />
-
                     <p className="text-small text-muted mb-0 d-inline-block">
                       (48)
                     </p>
@@ -765,7 +762,6 @@ class DefaultDashboard extends Component {
                       Chocolate Cake
                     </h6>
 
-                    <Rating total={5} rating={4} interactive={false} />
                     <p className="text-small text-muted mb-0  d-inline-block">
                       (24)
                     </p>
@@ -782,7 +778,6 @@ class DefaultDashboard extends Component {
                       Cremeschnitte
                     </h6>
 
-                    <Rating total={5} rating={4} interactive={false} />
                     <p className="text-small text-muted mb-0  d-inline-block">
                       (18)
                     </p>
