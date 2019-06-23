@@ -6,7 +6,6 @@ import {
   Container,
   UncontrolledDropdown,
   DropdownToggle,
-  DropdownItem,
   DropdownMenu
 } from "reactstrap";
 import IntlMessages from "Util/IntlMessages";
@@ -18,9 +17,9 @@ export class MenuMultipage extends Component {
   }
   render() {
     return (
-      <Container className="d-flex align-items-center justify-content-between">
+      <Container className="d-flex align-items-center justify-content-between menu">
         <NavLink className="navbar-logo pull-left" to="/home">
-          <span className="white" />
+          Trang chủ
         </NavLink>
         <Nav className="navbar-nav d-none d-lg-flex flex-row">
           <NavItem className={window.location.pathname === '/tin-tuc' ? 'active' : ''}>

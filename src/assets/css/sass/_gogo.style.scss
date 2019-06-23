@@ -577,6 +577,7 @@ p {
 
 .white {
   color: $button-text-color !important;
+  width: 100;
 }
 
 /* 02.Buttons */
@@ -1649,8 +1650,8 @@ button {
   }
 
   .navbar-logo {
-    width: 110px;
-    height: 35px;
+    width: 550px;
+    height: 100px;
     position: absolute;
     left: 0;
     right: 0;
@@ -6993,6 +6994,11 @@ input:-webkit-autofill {
     }
   }
 
+}
+
+.menu {
+  background: #145388;
+  height: 100px;
 }
 
 .feature-row {

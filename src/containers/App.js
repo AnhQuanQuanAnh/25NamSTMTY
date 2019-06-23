@@ -19,7 +19,7 @@ import About from "Routes/landing-pages/about";
 import AuthLogin from "Routes/landing-pages/auth-login";
 import AuthRegister from "Routes/landing-pages/auth-register";
 import Blog from "Routes/landing-pages/blog";
-import BlogDetail from "Routes/landing-pages/blog-detail";
+import Home from "Routes/landing-pages/home";
 import Confirmation from "Routes/landing-pages/confirmation";
 import Contact from "Routes/landing-pages/contact";
 import Content from "Routes/landing-pages/content";
@@ -78,7 +78,7 @@ class App extends Component {
         					<Route path={`/auth-login`} component={AuthLogin} />
         					<Route path={`/auth-register`} component={AuthRegister} />
         					<Route path={`/blog`} component={Blog} />
-        					<Route path={`/home`} component={BlogDetail} />
+        					<Route path={`/home`} component={Home} />
         					<Route path={`/confirmation`} component={Confirmation} />
         					<Route path={`/contact`} component={Contact} />
         					<Route path={`/content`} component={Content} />
