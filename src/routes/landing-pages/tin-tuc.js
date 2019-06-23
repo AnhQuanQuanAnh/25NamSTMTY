@@ -26,6 +26,9 @@ const mapStateToProps = ({ landingPage }) => {
 class TinTuc extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            data: []
+        }
         this.onMenuClick = this.onMenuClick.bind(this);
     }
 
@@ -39,6 +42,22 @@ class TinTuc extends Component {
 
     componentDidMount() {
         scrollToComponent(this["home"], { align: 'top', duration: 10 });
+        const url = "http://localhost:8089/post/";
+        fetch(url)
+            .then(response => {
+                if (response.status !== 200) {
+                    throw Error(response.statusText);
+                }
+                return response.json();
+            })
+            .then(json => {
+                this.setState({
+                    data: json.data.content
+                });
+            })
+            .catch(error => {
+                console.log('Fetch Error :-S', error);
+            })
     }
 
     onMenuClick(ref, event) {
@@ -57,6 +76,46 @@ class TinTuc extends Component {
 
     render() {
         const { messages } = this.props.intl;
+        const { data } = this.state;
+        const dataList = data.map((item, index) => {
+            const image = item.image;
+
+            return <Colxx key={index} xxs="12" lg="6" className="mb-4">
+                <Card className="flex-row mb-5 listing-card-container">
+                    <div className="w-40 position-relative">
+                        <NavLink to={`/tin-tuc/${item.id}`}>
+                            <img className="card-img-left" src={`data:image/jpeg;base64,${image}`} alt="Card cap" />
+                        </NavLink>
+                    </div>
+
+                    <div className="w-60 d-flex align-items-center">
+                        <CardBody>
+                            <NavLink to={`/tin-tuc/${item.id}`}>
+                                <h3 className="mb-4 listing-heading">
+                                    <ResponsiveEllipsis
+                                        text={item.title}
+                                        maxLine='2'
+                                        ellipsis='...'
+                                        trimRight
+                                        basedOn='letters' />
+                                </h3>
+                            </NavLink>
+                            <div className="listing-desc">
+                                <ResponsiveEllipsis
+                                    text={item.description}
+                                    maxLine='3'
+                                    ellipsis='...'
+                                    trimRight
+                                    basedOn='letters' />
+                            </div>
+                            <footer>
+                                <p className="text-muted text-small mb-0 font-weight-light"><NavLink to={`/tin-tuc/${item.id}`}>Chi tiết</NavLink></p>
+                            </footer>
+                        </CardBody>
+                    </div>
+                </Card>
+            </Colxx>
+        });
         return (
             <Fragment>
                 <div className={this.props.isMobileMenuOpen ? "landing-page show-mobile-menu" : "landing-page"}>
@@ -84,223 +143,8 @@ class TinTuc extends Component {
                             <div className="section" ref={(x) => { this.content = x; }}>
                                 <Container>
                                     <Row className="mt-5">
-                                        <Colxx xxs="12" lg="6" className="mb-4">
-                                            <Card className="flex-row mb-5 listing-card-container">
-                                                <div className="w-40 position-relative">
-                                                    <NavLink to="/bao-hiem-oto-tnds">
-                                                        <img className="card-img-left" src="/assets/img/detail.jpg" alt="Card cap" />
-                                                    </NavLink>
-                                                </div>
-
-                                                <div className="w-60 d-flex align-items-center">
-                                                    <CardBody>
-                                                        <NavLink to="/bao-hiem-oto-tnds">
-                                                            <h3 className="mb-4 listing-heading">
-                                                                <ResponsiveEllipsis
-                                                                    text={messages["bh.product.car"]}
-                                                                    maxLine='2'
-                                                                    ellipsis='...'
-                                                                    trimRight
-                                                                    basedOn='letters' />
-                                                            </h3>
-                                                        </NavLink>
-                                                        <div className="listing-desc">
-                                                            <ResponsiveEllipsis
-                                                                text={messages["bh.product.car.detail"]}
-                                                                maxLine='3'
-                                                                ellipsis='...'
-                                                                trimRight
-                                                                basedOn='letters' />
-                                                        </div>
-                                                        <footer>
-                                                            <p className="text-muted text-small mb-0 font-weight-light"><NavLink to="/bao-hiem-oto-tnds">Chi tiết</NavLink></p>
-                                                        </footer>
-                                                    </CardBody>
-                                                </div>
-                                            </Card>
-                                        </Colxx>
-
-                                        <Colxx xxs="12" lg="6" className="mb-4">
-                                            <Card className="flex-row mb-5 listing-card-container">
-                                                <div className="w-40 position-relative">
-                                                    <NavLink to="/bao-hiem-suc-khoe-doanh-nghiep">
-                                                        <img className="card-img-left" src="/assets/img/detail.jpg" alt="Card cap" />
-                                                    </NavLink>
-                                                </div>
-
-                                                <div className="w-60 d-flex align-items-center">
-                                                    <CardBody>
-                                                        <NavLink to="/bao-hiem-suc-khoe-doanh-nghiep">
-                                                            <h3 className="mb-4 listing-heading">
-                                                                <ResponsiveEllipsis
-                                                                    text={messages["bh.product.health.company"]}
-                                                                    maxLine='2'
-                                                                    ellipsis='...'
-                                                                    trimRight
-                                                                    basedOn='letters' />
-                                                            </h3>
-                                                        </NavLink>
-                                                        <div className="listing-desc ellipsis">
-                                                            <ResponsiveEllipsis
-                                                                text={messages["bh.product.health.company.detail"]}
-                                                                maxLine='3'
-                                                                ellipsis='...'
-                                                                trimRight
-                                                                basedOn='letters' />
-                                                        </div>
-                                                        <footer>
-                                                            <p className="text-muted text-small mb-0 font-weight-light"><NavLink to="/bao-hiem-suc-khoe-doanh-nghiep">Chi tiết</NavLink></p>
-                                                        </footer>
-                                                    </CardBody>
-                                                </div>
-                                            </Card>
-                                        </Colxx>
-
-                                        <Colxx xxs="12" lg="6" className="mb-4">
-                                            <Card className="flex-row mb-5 listing-card-container">
-                                                <div className="w-40 position-relative">
-                                                    <NavLink to="/bao-hiem-tai-nan">
-                                                        <img className="card-img-left" src="/assets/img/detail.jpg" alt="Card cap" />
-                                                    </NavLink>
-                                                </div>
-
-                                                <div className="w-60 d-flex align-items-center">
-                                                    <CardBody>
-                                                        <NavLink to="/blog-detail">
-                                                            <h3 className="mb-4 listing-heading">
-                                                                <ResponsiveEllipsis
-                                                                    text={messages["bh.product.tainan"]}
-                                                                    maxLine='2'
-                                                                    ellipsis='...'
-                                                                    trimRight
-                                                                    basedOn='letters' />
-                                                            </h3>
-                                                        </NavLink>
-                                                        <div className="listing-desc">
-                                                            <ResponsiveEllipsis
-                                                                text={messages["lp.blogsection.detail-3"]}
-                                                                maxLine='3'
-                                                                ellipsis='...'
-                                                                trimRight
-                                                                basedOn='letters' />
-                                                        </div>
-                                                        <footer>
-                                                            <p className="text-muted text-small mb-0 font-weight-light"><NavLink to="/bao-hiem-tai-nan">Chi tiết</NavLink></p>
-                                                        </footer>
-                                                    </CardBody>
-                                                </div>
-                                            </Card>
-                                        </Colxx>
-
-                                        <Colxx xxs="12" lg="6" className="mb-4">
-                                            <Card className="flex-row mb-5 listing-card-container">
-                                                <div className="w-40 position-relative">
-                                                    <NavLink to="/bao-hiem-suc-khoe-ca-nhan">
-                                                        <img className="card-img-left" src="/assets/img/detail.jpg" alt="Card cap" />
-                                                    </NavLink>
-                                                </div>
-
-                                                <div className="w-60 d-flex align-items-center">
-                                                    <CardBody>
-                                                        <NavLink to="/bao-hiem-suc-khoe-ca-nhan">
-                                                            <h3 className="mb-4 listing-heading ellipsis">
-                                                                <ResponsiveEllipsis
-                                                                    text={messages["bh.product.health.family"]}
-                                                                    maxLine='2'
-                                                                    ellipsis='...'
-                                                                    trimRight
-                                                                    basedOn='letters' />
-                                                            </h3>
-                                                        </NavLink>
-                                                        <div className="listing-desc ellipsis">
-                                                            <ResponsiveEllipsis
-                                                                text={messages["bh.product.health.family.detail"]}
-                                                                maxLine='3'
-                                                                ellipsis='...'
-                                                                trimRight
-                                                                basedOn='letters' />
-                                                        </div>
-                                                        <footer>
-                                                            <p className="text-muted text-small mb-0 font-weight-light"><NavLink to="/bao-hiem-oto">Chi tiết</NavLink></p>
-                                                        </footer>
-                                                    </CardBody>
-                                                </div>
-                                            </Card>
-                                        </Colxx>
-
-                                        <Colxx xxs="12" lg="6" className="mb-4">
-                                            <Card className="flex-row mb-5 listing-card-container">
-                                                <div className="w-40 position-relative">
-                                                    <NavLink to="/blog-detail">
-                                                        <img className="card-img-left" src="/assets/img/detail.jpg" alt="Card cap" />
-                                                    </NavLink>
-                                                </div>
-
-                                                <div className="w-60 d-flex align-items-center">
-                                                    <CardBody>
-                                                        <NavLink to="/blog-detail">
-                                                            <h3 className="mb-4 listing-heading">
-                                                                <ResponsiveEllipsis
-                                                                    text={messages["bh.product.travel"]}
-                                                                    maxLine='2'
-                                                                    ellipsis='...'
-                                                                    trimRight
-                                                                    basedOn='letters' />
-                                                            </h3>
-                                                        </NavLink>
-                                                        <div className="listing-desc">
-                                                            <ResponsiveEllipsis
-                                                                text={messages["bh.product.travel.detail"]}
-                                                                maxLine='3'
-                                                                ellipsis='...'
-                                                                trimRight
-                                                                basedOn='letters' />
-                                                        </div>
-                                                        <footer>
-                                                            <p className="text-muted text-small mb-0 font-weight-light"><NavLink to="/bao-hiem-oto">Chi tiết</NavLink></p>
-                                                        </footer>
-                                                    </CardBody>
-                                                </div>
-                                            </Card>
-                                        </Colxx>
-
-                                        <Colxx xxs="12" lg="6" className="mb-4">
-                                            <Card className="flex-row mb-5 listing-card-container">
-                                                <div className="w-40 position-relative">
-                                                    <NavLink to="/blog-detail">
-                                                        <img className="card-img-left" src="/assets/img/detail.jpg" alt="Card cap" />
-                                                    </NavLink>
-                                                </div>
-
-                                                <div className="w-60 d-flex align-items-center">
-                                                    <CardBody>
-                                                        <NavLink to="/blog-detail">
-                                                            <h3 className="mb-4 listing-heading">
-                                                                <ResponsiveEllipsis
-                                                                    text={messages["bh.product.motobike"]}
-                                                                    maxLine='2'
-                                                                    ellipsis='...'
-                                                                    trimRight
-                                                                    basedOn='letters' />
-                                                            </h3>
-                                                        </NavLink>
-                                                        <div className="listing-desc">
-                                                            <ResponsiveEllipsis
-                                                                text={messages["bh.product.motobike.detail"]}
-                                                                maxLine='3'
-                                                                ellipsis='...'
-                                                                trimRight
-                                                                basedOn='letters' />
-                                                        </div>
-                                                        <footer>
-                                                            <p className="text-muted text-small mb-0 font-weight-light"><NavLink to="/bao-hiem-oto">Chi tiết</NavLink></p>
-                                                        </footer>
-                                                    </CardBody>
-                                                </div>
-                                            </Card>
-                                        </Colxx>
+                                        {dataList}
                                     </Row>
-
                                     <Row>
                                         <Colxx xxs="12" className="text-center mt-5 mb-5">
                                             <Pagination aria-label="Page navigation example" listClassName="justify-content-center">
@@ -314,10 +158,10 @@ class TinTuc extends Component {
                                                         <i className="simple-icon-arrow-left" />
                                                     </PaginationLink>
                                                 </PaginationItem>
-                                                <PaginationItem>
+                                                <PaginationItem active>
                                                     <PaginationLink href="#">1</PaginationLink>
                                                 </PaginationItem>
-                                                <PaginationItem active>
+                                                <PaginationItem>
                                                     <PaginationLink href="#">2</PaginationLink>
                                                 </PaginationItem>
                                                 <PaginationItem>

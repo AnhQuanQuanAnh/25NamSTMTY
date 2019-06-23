@@ -7,7 +7,6 @@ import Headroom from 'react-headroom';
 import scrollToComponent from 'react-scroll-to-component';
 import { NavLink } from "react-router-dom";
 import Footer from "Components/LandingPage/SectionFooter";
-import SectionSidebar from "Components/LandingPage/SectionSidebar";
 import { injectIntl } from 'react-intl';
 import { Colxx } from "Components/CustomBootstrap";
 
@@ -137,12 +136,6 @@ class TinTucDetails extends React.Component {
                       <p className="mt-5 mb-0" dangerouslySetInnerHTML={{ __html: `${des}` }}>
                       </p>
                     </Colxx>
-
-                    <Colxx xxs="12" lg={{ size: 4, offset: 1 }} className="side-bar">
-                      <SectionSidebar onClick={() => {this.onNewsClick(this.props.match.params.id)}}>
-                      </SectionSidebar>
-                    </Colxx>
-
                   </Row>
                 </Container>
               </div>
