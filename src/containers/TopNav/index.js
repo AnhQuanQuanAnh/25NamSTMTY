@@ -305,13 +305,6 @@ class TopNav extends Component {
                     <IntlMessages id="menu.ui" />
                   </NavLink>
                   <NavLink
-                    to="/app/applications/chat"
-                    className="icon-menu-item"
-                  >
-                    <i className="iconsmind-Speach-BubbleDialog d-block" />{" "}
-                    <IntlMessages id="menu.chat" />
-                  </NavLink>
-                  <NavLink
                     to="/app/applications/survey"
                     className="icon-menu-item"
                   >

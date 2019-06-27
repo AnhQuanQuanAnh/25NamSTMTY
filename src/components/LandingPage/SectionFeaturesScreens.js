@@ -48,13 +48,6 @@ export default class SectionOffer extends React.Component {
                             </NavItem>
                             <NavItem>
                                 <NavLink
-                                    className={classnames({ active: this.state.activeTab === 'chat' })}
-                                    onClick={() => { this.toggle('chat'); }}>
-                                    <p><IntlMessages id="lp.screens.chat" /></p>
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink
                                     className={classnames({ active: this.state.activeTab === 'todo' })}
                                     onClick={() => { this.toggle('todo'); }}>
                                     <p><IntlMessages id="lp.screens.todo" /></p>
@@ -64,10 +57,6 @@ export default class SectionOffer extends React.Component {
                         <TabContent activeTab={this.state.activeTab}>
                             <TabPane className="justify-content-center" tabId="survey">
                                 <img alt="app " className="app-image" src="/assets/img/landing-page/application-survey.jpg" />
-                            </TabPane>
-
-                            <TabPane className="justify-content-center" tabId="chat">
-                                <img alt="app " className="app-image" src="/assets/img/landing-page/application-chat.jpg" />
                             </TabPane>
 
                             <TabPane className="justify-content-center" tabId="todo">

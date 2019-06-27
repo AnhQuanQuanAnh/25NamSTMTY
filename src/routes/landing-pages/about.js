@@ -94,12 +94,6 @@ class About extends Component {
                 </Container>
               </div>
 
-              <div className="section background background-no-bottom mb-0">
-                <Container>
-                  <SectionNewsletter />
-                </Container>
-              </div>
-
               <div className="section footer mb-0">
                 <Footer onClick={this.onMenuClick} />
               </div>

@@ -578,7 +578,6 @@ module.exports = {
   "lp.screens.detail": "With the help of components and layouts, we created three different applications. They are a good way to get you started if you want to build something similar.",
   "lp.screens.library": "Library",
   "lp.screens.todo": "Todo",
-  "lp.screens.chat": "Chat",
   "lp.screens.survey": "Survey",
 
   "lp.icons.title": "GIỚI THIỆU LOGO CỘNG ĐOÀN",
@@ -606,11 +605,6 @@ module.exports = {
   "lp.pricing.title": "Prices for Every Budget",
   "lp.pricing.detail": "Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate e-business applications through revolutionary catalysts for change. Seamlessly underwhelm optimal testing procedures whereas bricks-and-clicks processes.",
 
-  "lp.newsletter.title": "Newsletter",
-  "lp.newsletter.detail": "To receive our newsletter please complete the form below. We take your privacy seriously and we will not share your information with others. You can unsubscribe at any time.",
-  "lp.newsletter.placeholder": "E-mail address",
-  "lp.newsletter.button": "JOIN",
-
   "lp.login.title": "Login",
   "lp.login.detail-1": "Please use your credentials to login.",
   "lp.login.detail-2": "If you are not a member, please",
@@ -635,17 +629,6 @@ module.exports = {
 
   "lp.contact.title": "24/7 Dedicated Support",
   "lp.contact.detail": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override low hanging fruit to identify a ballpark the digital divide with additional clickthroughs from DevOps.",
-
-  "lp.connect.title": "Connect with Us",
-  "lp.connect.detail": "To receive our newsletter please complete the form below. We take your privacy seriously and we will not share your information with others. You can unsubscribe at any time.",
-  "lp.connect.title-1": "Live Chat",
-  "lp.connect.title-2": "Your Opinion",
-  "lp.connect.title-3": "Demo Videos",
-  "lp.connect.title-4": "Documentation",
-  "lp.connect.button-1": "START",
-  "lp.connect.button-2": "FEEDBACK",
-  "lp.connect.button-3": "WATCH",
-  "lp.connect.button-4": "VIEW",
 
   "lp.about.title": "About Our Company",
   "lp.about.detail": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.",
@@ -703,12 +686,6 @@ module.exports = {
 
   "lp.content.title": "Systems Thinking Correlation", 
   "lp.content.detail": "Green space global, policymaker; shared value disrupt segmentation social capital.", 
-
-  "lp.feedback.default": "Was this helpful?",
-  "lp.feedback.like": "Thanks, glad to help!",
-  "lp.feedback.dislike": "Thanks, we will work on this!",
-  "lp.feedback.nay": "Nay",
-  "lp.feedback.yay": "Yay",
 
   "lp.confirmation.title": "E-mail Confirmed!",
   "lp.confirmation.detail-1": "Thank you for your confirmation.",

@@ -11,7 +11,6 @@ import scrollToComponent from 'react-scroll-to-component';
 import { NavLink } from "react-router-dom";
 import SubHero from "Components/LandingPage/SectionHeroSub";
 import Footer from "Components/LandingPage/SectionFooter";
-import SectionNewsletter from "Components/LandingPage/SectionNewsletter";
 import { injectIntl } from 'react-intl';
 import { Colxx } from "Components/CustomBootstrap";
 
@@ -286,12 +285,6 @@ class Videos extends Component {
                     </Colxx>
                   </Row>
 
-                </Container>
-              </div>
-
-              <div className="section background background-no-bottom mb-0">
-                <Container>
-                  <SectionNewsletter />
                 </Container>
               </div>
 

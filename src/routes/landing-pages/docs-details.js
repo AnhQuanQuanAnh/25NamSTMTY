@@ -8,7 +8,6 @@ import scrollToComponent from 'react-scroll-to-component';
 import { NavLink } from "react-router-dom";
 import SubHero from "Components/LandingPage/SectionHeroSub";
 import Footer from "Components/LandingPage/SectionFooter";
-import SectionFeedback from "Components/LandingPage/SectionFeedback";
 import SectionNewsletter from "Components/LandingPage/SectionNewsletter";
 import { injectIntl } from 'react-intl';
 import { Colxx } from "Components/CustomBootstrap";
@@ -145,12 +144,6 @@ class DocsDetail extends Component {
                     </Colxx>
                     <Colxx xxs="12" md="6" className="mb-3">
                       <img alt="survey app" className="depth-1 img-fluid semi-rounded" src="/assets/img/landing-page/application-survey.jpg" />
-                    </Colxx>
-                  </Row>
-
-                  <Row className="mt-5 pt-5 feedback-container">
-                    <Colxx xxs="12" className="text-center">
-                      <SectionFeedback/>
                     </Colxx>
                   </Row>
 

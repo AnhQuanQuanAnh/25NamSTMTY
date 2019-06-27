@@ -3,7 +3,6 @@ import { Redirect, Route, Switch } from "react-router-dom";
 
 import surveyList from "./survey";
 import surveyDetail from "./survey-detail";
-import chat from "./chat";
 
 const Applications = ({ match }) => (
   <div className="dashboard-wrapper">
@@ -14,7 +13,6 @@ const Applications = ({ match }) => (
         isExact
       />
       <Route path={`${match.url}/survey`} component={surveyList} isExact />
-      <Route path={`${match.url}/chat`} component={chat} />
       <Redirect to="/error" />
     </Switch>
   </div>

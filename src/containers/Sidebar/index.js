@@ -448,12 +448,6 @@ class Sidebar extends Component {
                     <IntlMessages id="menu.survey" />
                   </NavLink>
                 </NavItem>
-                <NavItem>
-                  <NavLink to="/app/applications/chat">
-                    <i className="simple-icon-bubbles" />{" "}
-                    <IntlMessages id="menu.chat" />
-                  </NavLink>
-                </NavItem>
               </Nav>
               <Nav
                 className={classnames({
