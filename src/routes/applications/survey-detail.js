@@ -14,18 +14,13 @@ import {
   TabPane,
   Badge,
   ButtonDropdown,
-  FormGroup,
-  CustomInput,
-  Progress,
-  CardTitle
+  Progress
 } from "reactstrap";
 import { Colxx } from "Components/CustomBootstrap";
 import { BreadcrumbItems } from "Components/BreadcrumbContainer";
 import { NavLink } from "react-router-dom";
 import classnames from "classnames";
 import { mapOrder } from "Util/Utils";
-import ApplicationMenu from "Components/ApplicationMenu";
-import PerfectScrollbar from "react-perfect-scrollbar";
 
 import { connect } from "react-redux";
 import {
@@ -331,74 +326,6 @@ const surveyData=[];
           </Colxx>
         </Row>
 
-        <ApplicationMenu>
-          <PerfectScrollbar
-            option={{ suppressScrollX: true, wheelPropagation: false }}
-          >
-            <div className="p-4">
-              <p className="text-muted text-small">Status</p>
-              <ul className="list-unstyled mb-5">
-                <li className="active">
-                  <NavLink to="#">
-                    <i className="simple-icon-refresh" />
-                    Active Surveys
-                    <span className="float-right">12</span>
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="#">
-                    <i className="simple-icon-check" />
-                    Completed Surveys
-                    <span className="float-right">24</span>{" "}
-                  </NavLink>
-                </li>
-              </ul>
-
-              <p className="text-muted text-small">Categories</p>
-              <FormGroup className="mb-5">
-                <CustomInput
-                  type="checkbox"
-                  id="developmentCheck"
-                  label="Development"
-                  className="mb-2"
-                />
-                <CustomInput
-                  type="checkbox"
-                  id="workplaceCheck"
-                  className="mb-2"
-                  label="Workplace"
-                />
-                <CustomInput
-                  type="checkbox"
-                  id="hardwareCheck"
-                  className="mb-2"
-                  label="Hardware"
-                />
-              </FormGroup>
-
-              <p className="text-muted text-small">Labels</p>
-              <div>
-                <NavLink to="#">
-                  <Badge className="mb-1" color="outline-primary" pill>
-                    NEW FRAMEWORK
-                  </Badge>{" "}
-                </NavLink>
-
-                <NavLink to="#">
-                  <Badge className="mb-1" color="outline-secondary" pill>
-                    EDUCATION
-                  </Badge>{" "}
-                </NavLink>
-                <NavLink to="#">
-                  <Badge className="mb-1" color="outline-dark" pill>
-                    PERSONAL
-                  </Badge>{" "}
-                </NavLink>
-              </div>
-            </div>
-          </PerfectScrollbar>
-        </ApplicationMenu>
-     
     </Fragment>
     );
   }
