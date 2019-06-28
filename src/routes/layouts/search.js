@@ -1,10 +1,8 @@
 import React, { Component, Fragment } from 'react'
-import IntlMessages from 'Util/IntlMessages';
 import { Row, Card, CardBody } from 'reactstrap';
 import { NavLink } from "react-router-dom";
 
 import { Colxx, Separator } from 'Components/CustomBootstrap'
-import BreadcrumbContainer from 'Components/BreadcrumbContainer'
 import Pagination from 'Components/List/Pagination';
 
 import products from 'Data/products.json'
@@ -33,12 +31,6 @@ export default class SearchLayout extends Component {
         const rowLength = this.state.items.length;
         return (
             <Fragment>
-                <Row>
-                    <Colxx xxs="12">
-                        <BreadcrumbContainer heading={`Search : ${this.state.keyword}`} match={this.props.match} />
-                        <Separator className="mb-5" />
-                    </Colxx>
-                </Row>
                 <Row>
                     <Colxx xxs="12" className="mb-4">
                         <Card>

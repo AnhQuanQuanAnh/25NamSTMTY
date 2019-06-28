@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Colxx, Separator } from "Components/CustomBootstrap";
-import BreadcrumbContainer from "Components/BreadcrumbContainer";
+import { Colxx } from "Components/CustomBootstrap";
 import IntlMessages from "Util/IntlMessages";
 
 import {
@@ -40,16 +39,6 @@ export default class CollapseUi extends Component {
   render() {
     return (
       <Fragment>
-        <Row>
-          <Colxx xxs="12">
-            <BreadcrumbContainer
-              heading={<IntlMessages id="menu.collapse" />}
-              match={this.props.match}
-            />
-            <Separator className="mb-5" />
-          </Colxx>
-        </Row>
-
         <Row className="mb-4">
           <Colxx xxs="12">
             <Card>

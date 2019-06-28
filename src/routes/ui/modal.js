@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Colxx, Separator } from "Components/CustomBootstrap";
-import BreadcrumbContainer from "Components/BreadcrumbContainer";
+import { Colxx } from "Components/CustomBootstrap";
 import IntlMessages from "Util/IntlMessages";
 import {
   Row,
@@ -108,16 +107,6 @@ export default class ModalUi extends Component {
   render() {
     return (
       <Fragment>
-        <Row>
-          <Colxx xxs="12">
-            <BreadcrumbContainer
-              heading={<IntlMessages id="menu.modal" />}
-              match={this.props.match}
-            />
-            <Separator className="mb-5" />
-          </Colxx>
-        </Row>
-
         <Row>
           <Colxx xxs="12">
             <Card className="mb-4">

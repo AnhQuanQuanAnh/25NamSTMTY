@@ -15,8 +15,7 @@ import {
   Form,
   Input
 } from "reactstrap";
-import BreadcrumbContainer from "Components/BreadcrumbContainer";
-import { Colxx, Separator } from "Components/CustomBootstrap";
+import { Colxx } from "Components/CustomBootstrap";
 import { NavLink } from "react-router-dom";
 import ReactSiemaCarousel from "Components/ReactSiema/ReactSiemaCarousel";
 import PerfectScrollbar from "react-perfect-scrollbar";
@@ -81,16 +80,6 @@ export default class ContentDashboard extends Component {
   render() {
     return (
       <Fragment>
-        <Row>
-          <Colxx xxs="12">
-            <BreadcrumbContainer
-              heading={<IntlMessages id="menu.content" />}
-              match={this.props.match}
-            />
-            <Separator className="mb-5" />
-          </Colxx>
-        </Row>
-
         <Row>
           <Colxx lg="12" xl="6">
             <div className="icon-cards-row">

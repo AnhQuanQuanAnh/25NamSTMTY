@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Colxx, Separator } from "Components/CustomBootstrap";
-import BreadcrumbContainer from "Components/BreadcrumbContainer";
+import { Colxx } from "Components/CustomBootstrap";
 import IntlMessages from "Util/IntlMessages";
 import { Row, Card, CardBody, CardTitle } from "reactstrap";
 
@@ -58,17 +57,6 @@ export default class EditorsUi extends Component {
   render() {
     return (
       <Fragment>
-        <Row>
-          <Colxx xxs="12">
-            <BreadcrumbContainer
-              heading={<IntlMessages id="menu.editors" />}
-              match={this.props.match}
-            />
-            <Separator className="mb-5" />
-          </Colxx>
-        </Row>
-
-
         <Row className="mb-4">
           <Colxx xxs="12">
             <Card>

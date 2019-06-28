@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Row, Card, CardBody } from "reactstrap";
-import { Colxx, Separator } from "Components/CustomBootstrap";
-import BreadcrumbContainer from "Components/BreadcrumbContainer";
+import { Colxx } from "Components/CustomBootstrap";
 import Sortable from "react-sortablejs";
 import IntlMessages from "Util/IntlMessages";
 
@@ -9,16 +8,6 @@ export default class SortableUi extends Component {
   render() {
     return (
       <Fragment>
-        <Row>
-          <Colxx xxs="12">
-            <BreadcrumbContainer
-              heading={<IntlMessages id="menu.sortable" />}
-              match={this.props.match}
-            />
-            <Separator className="mb-5" />
-          </Colxx>
-        </Row>
-
         <Row>
           <Colxx xxs="12">
             <h5 className="mb-4">

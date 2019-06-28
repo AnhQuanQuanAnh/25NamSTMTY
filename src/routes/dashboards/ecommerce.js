@@ -12,8 +12,7 @@ import {
   DropdownMenu
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
-import { Colxx, Separator } from "Components/CustomBootstrap";
-import BreadcrumbContainer from "Components/BreadcrumbContainer";
+import { Colxx } from "Components/CustomBootstrap";
 import ReactSiemaCarousel from "Components/ReactSiema/ReactSiemaCarousel";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import BigCalendar from "react-big-calendar";
@@ -107,16 +106,6 @@ export default class ECommerceDashboard extends Component {
   render() {
     return (
       <Fragment>
-        <Row>
-          <Colxx xxs="12">
-            <BreadcrumbContainer
-              heading={<IntlMessages id="menu.ecommerce" />}
-              match={this.props.match}
-            />
-            <Separator className="mb-5" />
-          </Colxx>
-        </Row>
-
         <Row>
           <Colxx lg="12" xl="6">
             <div className="icon-cards-row">

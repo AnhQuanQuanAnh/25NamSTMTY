@@ -24,8 +24,7 @@ import Select from "react-select";
 import CustomSelectInput from "Components/CustomSelectInput";
 import { NavLink } from "react-router-dom";
 import PerfectScrollbar from "react-perfect-scrollbar";
-import { Colxx, Separator } from "Components/CustomBootstrap";
-import BreadcrumbContainer from "Components/BreadcrumbContainer";
+import { Colxx } from "Components/CustomBootstrap";
 import { CalendarToolbar } from "Components/Calendar/CalendarToolbar";
 
 import BigCalendar from "react-big-calendar";
@@ -120,15 +119,6 @@ class DefaultDashboard extends Component {
     const {messages} = this.props.intl;
     return (
       <Fragment>
-        <Row>
-          <Colxx xxs="12">
-            <BreadcrumbContainer
-              heading={<IntlMessages id="menu.default" />}
-              match={this.props.match}
-            />
-            <Separator className="mb-5" />
-          </Colxx>
-        </Row>
         <Row>
           <Colxx lg="12" xl="6">
             <div className="icon-cards-row">

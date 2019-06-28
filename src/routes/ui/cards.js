@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import {
   Row, Card, CardHeader, CardBody, CardTitle, CardSubtitle, CardImg, CardImgOverlay, CardText, Badge, Button, TabContent, TabPane, Nav, NavItem, NavLink as NavLinkRs, FormGroup,
-  Label,
   CustomInput
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
@@ -9,8 +8,7 @@ import classnames from 'classnames';
 
 
 import IntlMessages from "Util/IntlMessages";
-import { Colxx, Separator } from "Components/CustomBootstrap";
-import BreadcrumbContainer from "Components/BreadcrumbContainer";
+import { Colxx } from "Components/CustomBootstrap";
 import ThumbnailImage from "Components/ThumbnailImage";
 
 export default class CardsUi extends Component {
@@ -42,16 +40,6 @@ export default class CardsUi extends Component {
   render() {
     return (
       <Fragment>
-        <Row>
-          <Colxx xxs="12">
-            <BreadcrumbContainer
-              heading={<IntlMessages id="menu.cards" />}
-              match={this.props.match}
-            />
-            <Separator className="mb-5" />
-          </Colxx>
-        </Row>
-
         <Row>
 
           <Colxx xxs="12" >

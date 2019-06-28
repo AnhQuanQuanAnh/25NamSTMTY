@@ -13,7 +13,6 @@ import register from 'Routes/layouts/register'
 import error from 'Routes/layouts/error'
 import forgotPassword from 'Routes/layouts/forgot-password'
 
-import About from "Routes/landing-pages/about";
 import AuthLogin from "Routes/landing-pages/auth-login";
 import AuthRegister from "Routes/landing-pages/auth-register";
 import Blog from "Routes/landing-pages/blog";
@@ -71,7 +70,6 @@ class App extends Component {
 							authUser={user}
 							component={MainRoute}
 						/>
-        					<Route path={`/about`} component={About} />
         					<Route path={`/auth-login`} component={AuthLogin} />
         					<Route path={`/auth-register`} component={AuthRegister} />
         					<Route path={`/blog`} component={Blog} />

@@ -568,9 +568,6 @@ class Sidebar extends Component {
                   <a href="/singlepage-home" target="_blank"><i className="simple-icon-doc" />{" "}<IntlMessages id="menu.singlepage-home" /></a>
                 </NavItem>
                 <NavItem>
-                  <a href="/about" target="_blank"><i className="simple-icon-info" />{" "}<IntlMessages id="menu.about" /></a>
-                </NavItem>
-                <NavItem>
                   <a href="/auth-login" target="_blank"><i className="simple-icon-user-following" />{" "}<IntlMessages id="menu.auth-login" /></a>
                 </NavItem>
                 <NavItem>

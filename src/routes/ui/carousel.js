@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Colxx, Separator } from "Components/CustomBootstrap";
-import BreadcrumbContainer from "Components/BreadcrumbContainer";
+import { Colxx } from "Components/CustomBootstrap";
 import IntlMessages from "Util/IntlMessages";
 import { Row, Card, CardBody, CardTitle } from "reactstrap";
 import ReactSiemaCarousel from "Components/ReactSiema/ReactSiemaCarousel";
@@ -9,15 +8,6 @@ export default class CarouselUi extends Component {
   render() {
     return (
       <Fragment>
-        <Row>
-          <Colxx xxs="12">
-            <BreadcrumbContainer
-              heading={<IntlMessages id="menu.carousel" />}
-              match={this.props.match}
-            />
-            <Separator className="mb-5" />
-          </Colxx>
-        </Row>
 
         <Row>
           <Colxx xxs="12">
