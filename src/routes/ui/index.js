@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
-import alerts from './alerts';
 import badges from './badges';
 import buttons from './buttons';
 import cards from './cards';
@@ -30,7 +29,6 @@ export default class Ui extends Component {
         return (
             <Switch>
                 <Redirect exact from={`${match.url}/`} to={`${match.url}/alerts`} />
-                <Route path={`${match.url}/alerts`} component={alerts} />
                 <Route path={`${match.url}/badges`} component={badges} />
                 <Route path={`${match.url}/buttons`} component={buttons} />
                 <Route path={`${match.url}/cards`} component={cards} />
