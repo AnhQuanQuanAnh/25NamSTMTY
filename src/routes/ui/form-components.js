@@ -19,7 +19,6 @@ import DatePicker from "react-datepicker";
 import moment from "moment";
 import TagsInput from "react-tagsinput";
 import Switch from "rc-switch";
-import ReactAutosuggest from "Components/ReactAutosuggest";
 import { SliderTooltip, RangeTooltip } from "Components/SliderTooltip";
 import FineUploaderTraditional from "fine-uploader-wrappers";
 import Gallery from "react-fine-uploader";
@@ -325,27 +324,6 @@ class FormsUi extends Component {
                       value={this.state.selectedOptions}
                       onChange={this.handleChangeMulti}
                       options={SELECT_DATA}
-                    />
-                  </Colxx>
-                </Row>
-              </CardBody>
-            </Card>
-          </Colxx>
-        </Row>
-
-        <Row className="mb-4">
-          <Colxx xxs="12">
-            <Card>
-              <CardBody>
-                <CardTitle>
-                  <IntlMessages id="form-components.react-autosuggest" />
-                </CardTitle>
-                <Row className="mb-4">
-                  <Colxx xxs="12" sm="6">
-                    <ReactAutosuggest
-                      placeholder={messages["form-components.type-a-cake"]}
-                      data={cakeData}
-                      onChange={value => {}}
                     />
                   </Colxx>
                 </Row>

@@ -11,7 +11,6 @@ import classnames from 'classnames';
 import IntlMessages from "Util/IntlMessages";
 import { Colxx, Separator } from "Components/CustomBootstrap";
 import BreadcrumbContainer from "Components/BreadcrumbContainer";
-import ThumbnailLetters from "Components/ThumbnailLetters";
 import ThumbnailImage from "Components/ThumbnailImage";
 
 export default class CardsUi extends Component {
@@ -373,9 +372,6 @@ export default class CardsUi extends Component {
                     </Card>
 
                     <Card className="d-flex flex-row mb-4">
-                      <NavLink to="/app/ui/cards" className="d-flex">
-                        <ThumbnailLetters rounded text="Sarah Kortney" className="m-4" />
-                      </NavLink>
                       <div className=" d-flex flex-grow-1 min-width-zero">
                         <CardBody className=" pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
                           <div className="min-width-zero">
@@ -409,9 +405,6 @@ export default class CardsUi extends Component {
                     </Card>
 
                     <Card className="d-flex flex-row mb-4">
-                      <NavLink to="/app/ui/cards" className="d-flex">
-                        <ThumbnailLetters rounded small text="Sarah Kortney" className="m-4"  />
-                      </NavLink>
                       <div className=" d-flex flex-grow-1 min-width-zero">
                         <CardBody className=" pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
                           <div className="min-width-zero">

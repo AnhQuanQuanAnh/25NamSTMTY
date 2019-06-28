@@ -108,9 +108,6 @@ export default class AlertsUi extends Component {
           <Colxx xxs="12">
             <Card className="mb-4">
               <CardBody>
-                <CardTitle>
-                  <IntlMessages id="alert.react-notifications" />
-                </CardTitle>
                 <CardSubtitle>
                   <IntlMessages id="alert.outline" />
                 </CardSubtitle>

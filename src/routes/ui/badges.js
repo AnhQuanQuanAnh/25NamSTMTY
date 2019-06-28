@@ -123,17 +123,6 @@ export default class BadgesUi extends Component {
                         </Card>
                         <Card className="mb-4">
                             <CardBody>
-                                <CardTitle><IntlMessages id="badge.counter-badges" /></CardTitle>
-                                <Button color="primary">
-                                    Notifications <Badge color="light">4</Badge>
-                                </Button>{' '}
-                                <Button color="primary" outline>
-                                    Notifications <Badge color="secondary">4</Badge>
-                                </Button>
-                            </CardBody>
-                        </Card>
-                        <Card className="mb-4">
-                            <CardBody>
                                 <CardTitle>
                                     <IntlMessages id="badge.bootstrap-default" />
                                 </CardTitle>

@@ -131,7 +131,6 @@ module.exports = {
 
   /* 07.01.Alerts */
   "alert.rounded": "Rounded Alert",
-  "alert.react-notifications": "React Notifications",
   "alert.outline": "Outline",
   "alert.primary": "Primary",
   "alert.secondary": "Secondary",
