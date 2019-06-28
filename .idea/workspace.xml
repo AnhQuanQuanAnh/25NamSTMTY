@@ -186,7 +186,7 @@
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/src/redux/store.js" />
         <option value="$PROJECT_DIR$/src/lang/locales/en_US.js" />
-        <option value="$PROJECT_DIR$/src/assets/css/sass/_gogo.style.scss" />
+        <option value="$PROJECT_DIR$/src/assets/css/sass/stmty.style.scss" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/routes/layouts/index.js" />
         <option value="$PROJECT_DIR$/src/routes/layouts/details.js" />
@@ -549,7 +549,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/sass/_gogo.style.scss">
+    <entry file="file://$PROJECT_DIR$/src/assets/css/sass/stmty.style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="5691" column="38" selection-start-line="5691" selection-start-column="22" selection-end-line="5691" selection-end-column="38" />

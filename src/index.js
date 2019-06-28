@@ -12,7 +12,7 @@ let render = () => {
     console.log(color);
     switch (color) {
         case "light.blue":
-            import("./assets/css/sass/themes/gogo.light.blue.scss").then(x => {
+            import("./assets/css/sass/themes/stmty.light.blue.scss").then(x => {
                 const MainApp = require('./App').default;
                 ReactDOM.render(
                     <MainApp />,

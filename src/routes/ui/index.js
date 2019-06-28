@@ -15,7 +15,6 @@ import inputGroups from './input-groups';
 import jumbotron from './jumbotron';
 import modal from './modal';
 import navigation from './navigation';
-import popoverTooltip from './popover-tooltip';
 import sortable from './sortable';
 
 
@@ -43,7 +42,6 @@ export default class Ui extends Component {
                 <Route path={`${match.url}/jumbotron`} component={jumbotron} />
                 <Route path={`${match.url}/modal`} component={modal} />
                 <Route path={`${match.url}/navigation`} component={navigation} />
-                <Route path={`${match.url}/popover-tooltip`} component={popoverTooltip} />
                 <Route path={`${match.url}/sortable`} component={sortable} />
                 <Redirect to="/error" />
 
