@@ -2,12 +2,9 @@ import React, { Component, Fragment } from "react";
 import { Container, Row } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import { MenuMultipage, MenuMultipageMobile } from "Components/LandingPage/SectionMenu";
-import HomeHero from "Components/LandingPage/SectionHeroHome";
 import HomeFeatureCarousel from "Components/LandingPage/SectionFeatureCarousel";
 import Features from "Components/LandingPage/SectionFeatures";
 import Reviews from "Components/LandingPage/SectionReviews";
-import Team from "Components/LandingPage/SectionTeam";
-import Clients from "Components/LandingPage/SectionClients";
 import Footer from "Components/LandingPage/SectionFooter";
 import Headroom from 'react-headroom';
 import scrollToComponent from 'react-scroll-to-component';
@@ -67,7 +64,6 @@ class MultipageHome extends Component {
             <div className="content-container" ref={(x) => { this.home = x; }}>
               <div className="section home">
                 <Container>
-                  <HomeHero />
                   <HomeFeatureCarousel />
                   <Row>
                     <NavLink id="homeCircleButton" className="btn btn-circle btn-outline-semi-light hero-circle-button" to="#" onClick={(event) => this.onMenuClick("features", event)}>
@@ -86,18 +82,6 @@ class MultipageHome extends Component {
               <div className="section background">
                 <Container>
                   <Reviews />
-                </Container>
-              </div>
-
-              <div className="section">
-                <Container>
-                  <Team />
-                </Container>
-              </div>
-
-              <div className="section background background-no-bottom mb-0">
-                <Container>
-                  <Clients />
                 </Container>
               </div>
 

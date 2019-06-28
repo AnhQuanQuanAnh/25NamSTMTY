@@ -376,13 +376,6 @@ module.exports = {
   "cd.yearbook.title": "Kỷ yếu Cộng Đoàn Sống Tin Mừng Tình Yêu.",
   "cd.yearbook.detail": "Cuốn kỷ yếu với 250 trang chứa đựng những dấu ấn và chặng đường phát triển của Cộng đoàn sống tin mừng tình yêu.",
 
-  "lp.hero.line-1": "MAGIC IS IN",
-  "lp.hero.line-2": "THE DETAILS",
-  "lp.hero.detail-line-1": "Gogo is a combination of good design, quality code and attention for details.",
-  "lp.hero.detail-line-2": "We used same design language for components, layouts, apps and other parts of the theme.",
-  "lp.hero.detail-line-3": "Hope you enjoy it!",
-  "lp.hero.register": "REGISTER NOW",
-
   "lp.featurecarousel.title-1": "Tasteful Design",
   "lp.featurecarousel.detail-1": "User experience principles at the heart of the design process.",
   "lp.featurecarousel.title-3": "Two Panels Menu",
@@ -429,9 +422,6 @@ module.exports = {
   "lp.team.title": "Meet the Team",
   "lp.team.detail-1": "Our team brings a wealth of experience from some of the world’s most formidable production studios, agencies and startups.",
   "lp.team.detail-2": "We’re led by a team who constantly questions, tinkers, and challenges to unlock great creativity around every turn.",
-
-  "lp.clients.title": "Thousands of Happy Customers",
-  "lp.clients.detail": "Humanitarian resist incubator movements outcomes. Low-hanging fruit synergy correlation accessibility; save the world unprecedented challenge scalable. Leverage strategy, and, game-changer, agile, social return on investment.",
 
   "lp.footer.menu-1": "COMPANY",
   "lp.footer.menu-1-2": "Blog",
@@ -506,10 +496,6 @@ module.exports = {
 
   "lp.pricecomparison.title": "Feature Comparison",
   "lp.pricecomparison.detail": "Well, no need to brood on what tomorrow may bring. For one thing, tomorrow will be certain to bring worse than today, for many days to come. And there is nothing more that I can do to help it. The board is set, and the pieces are moving.",
-
-  "lp.offer.title": "Start Your Free Month",
-  "lp.offer.detail": "Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate e-business applications through revolutionary catalysts for change. Seamlessly underwhelm optimal testing procedures whereas bricks-and-clicks processes.",
-  "lp.offer.button": "FREE TRIAL",
 
   "lp.screens.title": "Screenshots",
   "lp.screens.detail": "With the help of components and layouts, we created three different applications. They are a good way to get you started if you want to build something similar.",
