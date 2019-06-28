@@ -82,7 +82,7 @@ class BlogDetail extends Component {
                     <Colxx xxs="12" lg="7">
                       <Card>
                         <CardBody className="p-0">
-                          <img alt="subpage" src="/assets/img/landing-page/cd.jfif" className="img-fluid card-img-fluid" />
+                          <img alt="subpage" src="/assets/img/balloon.jpg" className="img-fluid card-img-fluid" />
                         </CardBody>
                       </Card>
 

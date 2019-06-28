@@ -550,20 +550,6 @@ module.exports = {
   "lp.videos.detail": "Search our videos to provide you the guidence to get you started.",
   "lp.videos.search": "Search",
 
-  "lp.contact.title": "24/7 Dedicated Support",
-  "lp.contact.detail": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override low hanging fruit to identify a ballpark the digital divide with additional clickthroughs from DevOps.",
-
-  "lp.values.title": "Core Values",
-  "lp.values.detail": "Mobilize shared vocabulary mobilize problem-solvers synergy, citizen-centered collective impact low-hanging fruit. Change-makers, empower communities thought leadership ideate grit incubator data.",
-  "lp.values.title-1": "Movements when shine philanthropy co-creation our work.",
-  "lp.values.title-2": "Program area and dynamic venture.",
-  "lp.values.title-3": "Citizen-centered collective impact low-hanging fruit.",
-  "lp.values.title-4": "Mobilize shared vocabulary mobilize problem-solvers synergy.",
-  "lp.values.title-5": "To grit indicators, incubator issue outcomes radical.",
-  "lp.values.title-6": "Change-makers, empower communities.",
-  "lp.values.title-7": "Social return on investment.",
-  "lp.values.title-8": "Strategy invest save the world.",
-
   "lp.numbers.title": "Gogo by Numbers",
   "lp.numbers.detail": "Social return on investment unprecedented challenge co-creation bandwidth entrepreneur compassion. Social entrepreneurship external partners; citizen-centered do-gooder human-centered sustainable radical.",
   "lp.numbers.title-1": "15.000 Happy Customers",
@@ -573,7 +559,7 @@ module.exports = {
 
   "lp.blogdetail.title": "Taking Seamless Key Performance",
   "lp.blogdetail.detail": "Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.",
-  "lp.blogdetail.content": 'Chào mừng đến với kênh thông tin mừng 25 năm ngân khánh Cộng đoàn sống tin mừng tình yêu. Với sứ mạng mang đến cho quý đọc giả cũng như thành viên đại gia đình sống tin mừng tình yêu một cái nhìn tổng quan và đầy đủ nhất về chặng đường 25 năm hình thành và phát triển. <br /> <br /> Nhìn lại hành trình 25 năm đã qua với biết bao thăng trầm và biết bao nhiêu kỉ niệm gắn liền với từng con người ấy, kẻ đến rồi người lại đi tô điểm thêm cho chặng đường ấy thêm nhiều màu sắc cảm xúc khác nhau. Cùng với linh đạo của Cộng đoàn đó là: "Hãy bước đi trong yêu thương, để anh em được sống dồi dào" Cộng đoàn đã và đang phát triển từng ngày điều đó thể hiện rõ nhất qua số lượng thành viên tham gia sinh hoạt ngày một đông hơn cũng như đời sống đức tin cũa các thành viên mỗi ngày thêm mạnh mẽ. <br /> <br /> Mừng 25 năm hồng ân, mỗi người chúng ta cũng nhìn lại bản thân mình đã học hỏi được những gì đã nhận được những gì và còn thiếu sót những gì, qua đó để cho mỗi thành viên cố gắng hơn từng ngày. Vestibulum blandit urna ut tellus lobortis tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque quis cursus mauris. Nam in ornare erat. Vestibulum convallis enim ac massa dapibus consectetur. Maecenas facilisis eros ac felis mattis, eget auctor sapien varius. Nulla non purus fermentum, pulvinar dui condimentum, malesuada nibh. Sed viverra quam urna, at condimentum ante viverra non. Mauris posuere erat sapien, a convallis libero lobortis sit amet. Suspendisse in orci tellus. <br /> <br /> Phasellus efficitur tellus a sem condimentum, vitae convallis sapien feugiat. Aenean non nibh nec nunc aliquam iaculis. Ut quis suscipit nunc. Duis at lectus a est aliquam venenatis vitae eget arcu. Sed egestas felis eget convallis maximus. Curabitur maximus, ligula vel sagittis iaculis, risus nisi tincidunt sem, ut ultricies libero nulla eu ligula. Nam ultricies mollis nulla, sed laoreet leo convallis ac. Mauris nisl risus, tincidunt ac diam aliquet, convallis pellentesque nisi. Nam sit amet libero at odio malesuada ultricies a vitae dolor. Cras in viverra felis, non consequat quam. Praesent a orci enim. Vivamus porttitor nisi at nisl egestas iaculis. Nullam commodo eget dui sollicitudin sagittis. Duis id nibh mollis, hendrerit metus consectetur, ullamcorper risus. Morbi elementum ultrices nunc, quis porta nisi ornare sit amet. <br /> <br /> Etiam tincidunt orci in nisi aliquam placerat. Aliquam finibus in sem ut vehicula. Morbi eget consectetur leo. Quisque consectetur lectus eros, sed sodales libero ornare cursus. Etiam elementum ut dolor eget hendrerit. Suspendisse eu lacus eu eros lacinia feugiat sit amet non purus.',
+  "lp.blogdetail.content": 'Chào mừng đến với kênh thông tin mừng 25 năm ngân khánh Cộng đoàn sống tin mừng tình yêu. Với sứ mạng mang đến cho quý đọc giả cũng như thành viên đại gia đình sống tin mừng tình yêu một cái nhìn tổng quan và đầy đủ nhất về chặng đường 25 năm hình thành và phát triển. <br /> <br /> Nhìn lại hành trình 25 năm đã qua với biết bao thăng trầm và biết bao nhiêu kỉ niệm gắn liền với từng con người ấy, kẻ đến rồi người lại đi tô điểm thêm cho chặng đường ấy thêm nhiều màu sắc cảm xúc khác nhau. Cùng với linh đạo của Cộng đoàn đó là: "Hãy bước đi trong yêu thương, để anh em được sống dồi dào" Cộng đoàn đã và đang phát triển từng ngày điều đó thể hiện rõ nhất qua số lượng thành viên tham gia sinh hoạt ngày một đông hơn cũng như đời sống đức tin cũa các thành viên mỗi ngày thêm mạnh mẽ. <br /> <br /> Mừng 25 năm hồng ân, mỗi người chúng ta cũng nhìn lại bản thân mình đã học hỏi được những gì đã nhận được những gì và còn thiếu sót những gì, qua đó để cho mỗi thành viên cố gắng hơn từng ngày.',
 
   "lp.sidebar.tour-title": "Take a Tour",
   "lp.sidebar.review-title": "Recent Review",

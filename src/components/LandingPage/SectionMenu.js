@@ -19,7 +19,7 @@ export class MenuMultipage extends Component {
     return (
       <Container className="d-flex align-items-center justify-content-between menu">
         <NavLink className="navbar-logo pull-left" to="/home">
-          Trang chủ
+          <img src="/assets/img/balloon.jpg" className="img-thumbnail border-0 list-thumbnail align-self-center xsmall"/>
         </NavLink>
         <Nav className="navbar-nav d-none d-lg-flex flex-row">
           <NavItem className={window.location.pathname === '/tin-tuc' ? 'active' : ''}>
