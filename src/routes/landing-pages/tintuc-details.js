@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom";
 import Footer from "Components/LandingPage/SectionFooter";
 import { injectIntl } from 'react-intl';
 import { Colxx } from "Components/CustomBootstrap";
+import FeaturesIcons from "Components/LandingPage/SectionFeaturesIcons";
 
 import { connect } from "react-redux";
 import { landingPageMobileMenuToggle, landingPageMobileMenuClose } from "Redux/actions";
@@ -111,29 +112,29 @@ class TinTucDetails extends React.Component {
             <Headroom className="landing-page-nav" ref={(x) => { this.headroom = x; }}>
               <MenuMultipage onMobileMenuToggle={() => this.onMobileMenuToggle()}></MenuMultipage>
             </Headroom>
+            <Row>
+              <Colxx xxs={{ size: "12", offset: 0 }} lg={{ size: 8, offset: 2 }} className="text-left">
+                <div className="section" ref={(x) => { this.content = x; }}>
+                  <Container>
+                    <Row>
+                      <Colxx xxs="12" lg="12">
+                        <Card>
+                          <CardBody className="p-0">
+                            <img alt="subpage" className="img-fluid card-img-fluid" src={`data:image/jpeg;base64,${news.image}`} />
+                          </CardBody>
+                        </Card>
 
-            <div className="content-container" ref={(x) => { this.home = x; }}>
-              <div className="section center" ref={(x) => { this.content = x; }}>
-                <Container>
-                  <Row>
-                    <Colxx xxs="12" lg="5">
-                      <Card>
-                        <CardBody className="p-0">
-                          <img className="news-img" src={`data:image/jpeg;base64,${news.image}`} />
-                        </CardBody>
-                      </Card>
+                        <p className="mt-5 mb-0" dangerouslySetInnerHTML={{ __html: `${des}` }}>
+                        </p>
+                      </Colxx>
+                    </Row>
+                  </Container>
+                </div>
+              </Colxx>
+            </Row>
 
-                      <p className="mt-5 mb-0" dangerouslySetInnerHTML={{ __html: `${des}` }}>
-                      </p>
-                    </Colxx>
-                  </Row>
-                </Container>
-              </div>
-
-              <div className="section footer mb-0">
-                <Footer onClick={this.onMenuClick} />
-              </div>
-
+            <div className="section footer mb-0">
+              <Footer onClick={this.onMenuClick} />
             </div>
           </div>
         </div>
