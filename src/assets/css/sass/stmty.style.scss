@@ -4382,16 +4382,6 @@ input:-webkit-autofill {
   animation: sk-bouncedelay 1.2s infinite ease-in-out both;
 }
 
-.spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
 @-webkit-keyframes sk-bouncedelay {
 
   0%,
@@ -5755,7 +5745,7 @@ input:-webkit-autofill {
 
     &.footer {
       // background: url($lpBackgroundFooter);
-      background-color: $foreground-color;
+      background-color: $foreground-color-1;
       background-repeat: no-repeat;
       padding-bottom: 0;
     }
@@ -6332,6 +6322,14 @@ input:-webkit-autofill {
         }
       }
     }
+  }
+
+  .news-img {
+    width: 10%;
+    // border-top-left-radius: calc(0.15rem - 1px);
+    // border-bottom-left-radius: calc(0.15rem - 1px);
+    height: 10%;
+    object-fit: cover;
   }
 
 }

@@ -136,10 +136,6 @@ class TinTuc extends Component {
                                     </Row>
                                 </Container>
                             </div>
-                            <Colxx xxs={{ size: "12", offset: 0 }} lg={{ size: 8, offset: 2 }} className="text-center">
-                                <h1>Kỷ yếu</h1>
-                            </Colxx>
-
                             <div className="section" ref={(x) => { this.content = x; }}>
                                 <Container>
                                     <Row className="mt-5">

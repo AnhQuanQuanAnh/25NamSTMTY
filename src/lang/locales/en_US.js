@@ -423,25 +423,6 @@ module.exports = {
   "lp.team.detail-1": "Our team brings a wealth of experience from some of the world’s most formidable production studios, agencies and startups.",
   "lp.team.detail-2": "We’re led by a team who constantly questions, tinkers, and challenges to unlock great creativity around every turn.",
 
-  "lp.footer.menu-1": "COMPANY",
-  "lp.footer.menu-1-2": "Blog",
-  "lp.footer.menu-1-4": "Contact",
-  "lp.footer.menu-2": "PRODUCT",
-  "lp.footer.menu-2-1": "Features",
-  "lp.footer.menu-2-2": "Pricing",
-  "lp.footer.menu-2-3": "Api",
-  "lp.footer.menu-2-4": "Enterprise",
-  "lp.footer.menu-3": "LEARNING",
-  "lp.footer.menu-3-1": "Help",
-  "lp.footer.menu-3-2": "Quick Start",
-  "lp.footer.menu-3-3": "Docs",
-  "lp.footer.menu-3-4": "Videos",
-  "lp.footer.menu-4": "LEGAL",
-  "lp.footer.menu-4-1": "Security",
-  "lp.footer.menu-4-2": "Privacy",
-  "lp.footer.menu-4-3": "Cookies",
-  "lp.footer.copyright": "2018 © ColoredStrategies",
-
   "cd.footer.menu-1": "Liên hệ",
   "cd.footer.menu-1-1": "CỘNG ĐOÀN GIA ĐÌNH SỐNG TIN MỪNG TÌNH YÊU",
   "cd.footer.menu-1-2": "Địa chỉ:",
@@ -569,11 +550,5 @@ module.exports = {
 
   "lp.content.title": "Systems Thinking Correlation", 
   "lp.content.detail": "Green space global, policymaker; shared value disrupt segmentation social capital.", 
-
-  "lp.confirmation.title": "E-mail Confirmed!",
-  "lp.confirmation.detail-1": "Thank you for your confirmation.",
-  "lp.confirmation.detail-2": "You can start using Gogo or might want to check out",
-  "lp.confirmation.link": "documentation",
-  "lp.confirmation.home": "GO TO HOME",
 
 };

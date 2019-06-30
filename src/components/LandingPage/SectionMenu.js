@@ -19,7 +19,7 @@ export class MenuMultipage extends Component {
     return (
       <Container className="d-flex align-items-center justify-content-between menu">
         <NavLink className="navbar-logo pull-left" to="/home">
-          <img src="/assets/img/balloon.jpg" className="img-thumbnail border-0 list-thumbnail align-self-center xsmall"/>
+          <img src="/assets/img/balloon.jpg" className="img-thumbnail border-0 list-thumbnail align-self-center xsmall" />
         </NavLink>
         <Nav className="navbar-nav d-none d-lg-flex flex-row">
           <NavItem className={window.location.pathname === '/tin-tuc' ? 'active' : ''}>
@@ -168,6 +168,40 @@ export class MenuMultipageMobile extends React.Component {
                 </NavLink>
               </DropdownMenu>
             </UncontrolledDropdown>
+          </NavItem>
+          <NavItem className={window.location.pathname === '/ky-yeu-cong-doan' || window.location.pathname === '/ky-yeu-nhom-duc-diem' || window.location.pathname === '/ky-yeu-nhom-khoa-phuong' ? 'active' : ''}>
+            <UncontrolledDropdown>
+              <DropdownToggle tag="a" caret color="empty" href="#">
+                <IntlMessages id="cd.menu.yearbook" />
+              </DropdownToggle>
+              <DropdownMenu>
+                <NavLink to="/ky-yeu-cong-doan" className="dropdown-item">
+                  <IntlMessages id="cd.menu.yb_cd" />
+                </NavLink>
+                <NavLink to="/ky-yeu-nhom-duc-diem" className="dropdown-item">
+                  <IntlMessages id="cd.menu.yb_ducdiem" />
+                </NavLink>
+                <NavLink to="/ky-yeu-nhom-quan-uyen" className="dropdown-item">
+                  <IntlMessages id="cd.menu.yb_quanuyen" />
+                </NavLink>
+                <NavLink to="/ky-yeu-nhom-quan-uyen" className="dropdown-item">
+                  <IntlMessages id="cd.menu.yb_trungphuc" />
+                </NavLink>
+                <NavLink to="/ky-yeu-nhom-khoa-phuong" className="dropdown-item">
+                  <IntlMessages id="cd.menu.yb_khoaphuong" />
+                </NavLink>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </NavItem>
+          <NavItem className={window.location.pathname === '/tu-lieu-phim-anh' ? 'active' : ''}>
+            <NavLink to="/tu-lieu-phim-anh">
+              <IntlMessages id="cd.menu.media" />
+            </NavLink>
+          </NavItem>
+          <NavItem className={window.location.pathname === '/hau-truong' ? 'active' : ''}>
+            <NavLink to="/hau-truong">
+              <IntlMessages id="cd.menu.hautruong" />
+            </NavLink>
           </NavItem>
         </Nav>
 

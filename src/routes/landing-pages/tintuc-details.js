@@ -113,23 +113,13 @@ class TinTucDetails extends React.Component {
             </Headroom>
 
             <div className="content-container" ref={(x) => { this.home = x; }}>
-              <div className="section home subpage">
+              <div className="section center" ref={(x) => { this.content = x; }}>
                 <Container>
                   <Row>
-                    <NavLink className="btn btn-circle btn-outline-semi-light hero-circle-button" to="#" onClick={(event) => this.onMenuClick("content", event)}>
-                      <i className="simple-icon-arrow-down"></i>
-                    </NavLink>
-                  </Row>
-                </Container>
-              </div>
-
-              <div className="section" ref={(x) => { this.content = x; }}>
-                <Container>
-                  <Row>
-                    <Colxx xxs="12" lg="7">
+                    <Colxx xxs="12" lg="5">
                       <Card>
                         <CardBody className="p-0">
-                          <img className="card-img-left" src={`data:image/jpeg;base64,${news.image}`} />
+                          <img className="news-img" src={`data:image/jpeg;base64,${news.image}`} />
                         </CardBody>
                       </Card>
 

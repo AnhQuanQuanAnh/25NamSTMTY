@@ -15,14 +15,9 @@ import forgotPassword from 'Routes/layouts/forgot-password'
 
 import AuthLogin from "Routes/landing-pages/auth-login";
 import AuthRegister from "Routes/landing-pages/auth-register";
-import Blog from "Routes/landing-pages/blog";
 import Home from "Routes/landing-pages/home";
-import Confirmation from "Routes/landing-pages/confirmation";
-import Contact from "Routes/landing-pages/contact";
-import Content from "Routes/landing-pages/content";
 import Docs from "Routes/landing-pages/docs";
 import MeaningLogo from "Routes/landing-pages/meaning-logo";
-import Prices from "Routes/landing-pages/prices";
 import Videos from "Routes/landing-pages/videos";
 import VideoDetail from "Routes/landing-pages/video-detail";
 import DocsDetails from "Routes/landing-pages/docs-details";
@@ -72,15 +67,8 @@ class App extends Component {
 						/>
         					<Route path={`/auth-login`} component={AuthLogin} />
         					<Route path={`/auth-register`} component={AuthRegister} />
-        					<Route path={`/blog`} component={Blog} />
         					<Route path={`/home`} component={Home} />
-        					<Route path={`/confirmation`} component={Confirmation} />
-        					<Route path={`/contact`} component={Contact} />
-        					<Route path={`/content`} component={Content} />
-        					<Route path={`/docs`} component={Docs} />
 							<Route path={`/y-nghia-logo`} component={MeaningLogo} />
-							<Route path={`/tin-tuc-test`} component={Blog} />
-							<Route path={`/gioi-thieu`} component={Blog} />
 							<Route path={`/ky-yeu-cong-doan`} component={Docs} />
 							<Route path={`/ky-yeu-nhom-duc-diem`} component={KyYeu} />
 							<Route path={`/ky-yeu-nhom-khoa-phuong`} component={KyYeu} />
@@ -92,8 +80,6 @@ class App extends Component {
 							<Route path={`/ky-yeu-nhom-diemanh`} component={KyYeu} />
 							<Route path={`/ky-yeu-nhom-anhtuan`} component={KyYeu} />
 							<Route path={`/tu-lieu-phim-anh`} component={Videos} />
-        					<Route path={`/prices`} component={Prices} />
-        					<Route path={`/videos`} component={Videos} />
         					<Route path={`/video-detail`} component={VideoDetail} />
         					<Route path={`/docs-details`} component={DocsDetails} />
         					<Route path={`/tin-tuc/:id`} component={TinTucDetails} />

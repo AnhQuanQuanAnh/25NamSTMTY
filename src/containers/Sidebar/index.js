@@ -580,9 +580,6 @@ class Sidebar extends Component {
                   <a href="/blog-detail" target="_blank"><i className="simple-icon-bubble" />{" "}<IntlMessages id="menu.blog-detail" /></a>
                 </NavItem>
                 <NavItem>
-                  <a href="/contact" target="_blank"><i className="simple-icon-phone" />{" "}<IntlMessages id="menu.contact" /></a>
-                </NavItem>
-                <NavItem>
                   <a href="/content" target="_blank"><i className="simple-icon-book-open" />{" "}<IntlMessages id="menu.content" /></a>
                 </NavItem>
                 <NavItem>
