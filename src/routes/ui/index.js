@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 import badges from './badges';
-import buttons from './buttons';
 import cards from './cards';
 import carousel from './carousel';
 import collapse from './collapse';
@@ -29,7 +28,6 @@ export default class Ui extends Component {
             <Switch>
                 <Redirect exact from={`${match.url}/`} to={`${match.url}/alerts`} />
                 <Route path={`${match.url}/badges`} component={badges} />
-                <Route path={`${match.url}/buttons`} component={buttons} />
                 <Route path={`${match.url}/cards`} component={cards} />
                 <Route path={`${match.url}/carousel`} component={carousel} />
                 <Route path={`${match.url}/collapse`} component={collapse} />

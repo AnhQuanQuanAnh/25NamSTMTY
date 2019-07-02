@@ -25,7 +25,6 @@ import CustomSelectInput from "Components/CustomSelectInput";
 import { NavLink } from "react-router-dom";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { Colxx } from "Components/CustomBootstrap";
-import { CalendarToolbar } from "Components/Calendar/CalendarToolbar";
 
 import BigCalendar from "react-big-calendar";
 import moment from "moment";
@@ -369,23 +368,6 @@ class DefaultDashboard extends Component {
         </Row>
 
         <Row>
-          <Colxx xl="6" lg="12" className="mb-4">
-            <Card>
-              <CardBody>
-                <CardTitle>
-                  <IntlMessages id="dashboards.calendar" />
-                </CardTitle>
-                <BigCalendar
-                  style={{ minHeight: "500px" }}
-                  events={events}
-                  views={["month"]}
-                  components={{
-                    toolbar: CalendarToolbar
-                  }}
-                />
-              </CardBody>
-            </Card>
-          </Colxx>
           <Colxx xl="6" lg="12" className="mb-4">
             <Card className="h-100">
               <CardBody>
