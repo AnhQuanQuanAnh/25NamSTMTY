@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 import Footer from "Components/LandingPage/SectionFooter";
 import { injectIntl } from 'react-intl';
 import { Colxx } from "Components/CustomBootstrap";
-import FeaturesIcons from "Components/LandingPage/SectionFeaturesIcons";
+import TinLienQuan from "Components/LandingPage/TinLienQuan";
 
 import { connect } from "react-redux";
 import { landingPageMobileMenuToggle, landingPageMobileMenuClose } from "Redux/actions";
@@ -80,7 +80,6 @@ class TinTucDetails extends React.Component {
 
   onNewsClick(id) {
     console.log("click news", id);
-    console.log("object");
     // var id = this.props.match.params.id;
     const url = `http://localhost:8089/post/tin-tuc/${id}`;
     fetch(url)
@@ -103,6 +102,7 @@ class TinTucDetails extends React.Component {
   render() {
     const { news } = this.state;
     const des = news.description;
+    const title = news.title;
     return (
       <Fragment>
         <div className={this.props.isMobileMenuOpen ? "landing-page show-mobile-menu" : "landing-page"}>
@@ -112,26 +112,37 @@ class TinTucDetails extends React.Component {
             <Headroom className="landing-page-nav" ref={(x) => { this.headroom = x; }}>
               <MenuMultipage onMobileMenuToggle={() => this.onMobileMenuToggle()}></MenuMultipage>
             </Headroom>
-            <Row>
-              <Colxx xxs={{ size: "12", offset: 0 }} lg={{ size: 8, offset: 2 }} className="text-left">
-                <div className="section" ref={(x) => { this.content = x; }}>
-                  <Container>
-                    <Row>
-                      <Colxx xxs="12" lg="12">
-                        <Card>
-                          <CardBody className="p-0">
-                            <img alt="subpage" className="img-fluid card-img-fluid" src={`data:image/jpeg;base64,${news.image}`} />
-                          </CardBody>
-                        </Card>
 
-                        <p className="mt-5 mb-0" dangerouslySetInnerHTML={{ __html: `${des}` }}>
-                        </p>
-                      </Colxx>
-                    </Row>
-                  </Container>
-                </div>
-              </Colxx>
-            </Row>
+            <div className="section" ref={(x) => { this.content = x; }}>
+              <div>
+                <Container>
+                  <Row className="mt-5">
+                    <Colxx xxs="12">
+                      <h3>{title}</h3>
+                    </Colxx>
+                    <Colxx xxs="12">
+                      <Card>
+                        <CardBody className="p-0">
+                          <img alt="subpage" className="card-img-top" src={`data:image/jpeg;base64,${news.image}`} />
+                        </CardBody>
+                      </Card>
+                    </Colxx>
+
+                  </Row>
+                  <Row className="mt-5">
+                    <Colxx xxs="12">
+                      <h4>{des}</h4>
+                    </Colxx>
+                  </Row>
+                </Container>
+              </div>
+            </div>
+
+            <div className="section background">
+              <Container>
+                <TinLienQuan onClick={ () => this.onNewsClick(this.props.match.params.id) }/>
+              </Container>
+            </div>
 
             <div className="section footer mb-0">
               <Footer onClick={this.onMenuClick} />

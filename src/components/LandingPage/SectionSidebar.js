@@ -35,19 +35,19 @@ export default class SectionSidebar extends React.Component {
         const { data } = this.state;
         const dataList = data.map((item, index) => {
             const image = item.image;
-        
-            return <Card key={index} className="flex-row mb-4">
-                <div className="w-30 position-relative">
-                    <img className="card-img-left" src={`data:image/jpeg;base64,${image}`} alt="Card cap" />
-                </div>
-                <div className="w-70 d-flex align-items-center">
-                    <CardBody>
-                        <NavLink to={`/tin-tuc/${item.id}`}>
+
+            return <NavLink key={index} to={`/tin-tuc/${item.id}`}>
+                <Card className="flex-row mb-4">
+                    <div className="w-30 position-relative">
+                        <img className="card-img-left" src={`data:image/jpeg;base64,${image}`} alt="Card cap" />
+                    </div>
+                    <div className="w-70 d-flex align-items-center">
+                        <CardBody>
                             <h3 className="mb-0">{item.title}</h3>
-                        </NavLink>
-                    </CardBody>
-                </div>
-            </Card>
+                        </CardBody>
+                    </div>
+                </Card>
+            </NavLink>
         });
 
         return (
