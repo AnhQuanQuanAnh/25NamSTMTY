@@ -33,6 +33,7 @@ class TinTucDetails extends React.Component {
       news: this.emptyObject
     }
     this.onMenuClick = this.onMenuClick.bind(this);
+    this.onNewsClick = this.onNewsClick.bind(this);
   }
 
   onMobileMenuToggle() {
@@ -78,9 +79,9 @@ class TinTucDetails extends React.Component {
       })
   }
 
-  onNewsClick(id) {
-    console.log("click news", id);
-    // var id = this.props.match.params.id;
+  onNewsClick() {
+    // console.log("click news", id);
+    var id = this.props.match.params.id;
     const url = `http://localhost:8089/post/tin-tuc/${id}`;
     fetch(url)
       .then(response => {
@@ -93,6 +94,30 @@ class TinTucDetails extends React.Component {
         this.setState({
           data: json.data
         });
+        console.log("data", this.state.data);
+      })
+      .catch(error => {
+        console.log('Fetch Error :-S', error);
+      })
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log("click news", nextProps);
+    var id = nextProps.match.params.id;
+    // this.onNewsClick();
+    const url = `http://localhost:8089/post/tin-tuc/${id}`;
+    fetch(url)
+      .then(response => {
+        if (response.status !== 200) {
+          throw Error(response.statusText);
+        }
+        return response.json();
+      })
+      .then(json => {
+        this.setState({
+          data: json.data
+        });
+        console.log("data", this.state.data);
       })
       .catch(error => {
         console.log('Fetch Error :-S', error);
@@ -102,6 +127,7 @@ class TinTucDetails extends React.Component {
   render() {
     const { news } = this.state;
     const des = news.description;
+    console.log("des", des);
     const title = news.title;
     return (
       <Fragment>
@@ -140,12 +166,12 @@ class TinTucDetails extends React.Component {
 
             <div className="section background">
               <Container>
-                <TinLienQuan onClick={ () => this.onNewsClick(this.props.match.params.id) }/>
+                <TinLienQuan />
               </Container>
             </div>
 
             <div className="section footer mb-0">
-              <Footer onClick={this.onMenuClick} />
+              <Footer onClick={ this.onMenuClick } />
             </div>
           </div>
         </div>
