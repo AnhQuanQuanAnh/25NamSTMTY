@@ -34,6 +34,7 @@ class TinTucDetails extends React.Component {
     }
     this.onMenuClick = this.onMenuClick.bind(this);
     this.onNewsClick = this.onNewsClick.bind(this);
+    this.handleOnclickEvent = this.handleOnclickEvent.bind(this);
   }
 
   onMobileMenuToggle() {
@@ -79,9 +80,10 @@ class TinTucDetails extends React.Component {
       })
   }
 
-  onNewsClick() {
+  onNewsClick(id) {
     // console.log("click news", id);
-    var id = this.props.match.params.id;
+    // var id = this.props.match.params.id;
+    // console.log("id", id);
     const url = `http://localhost:8089/post/tin-tuc/${id}`;
     fetch(url)
       .then(response => {
@@ -94,34 +96,71 @@ class TinTucDetails extends React.Component {
         this.setState({
           data: json.data
         });
-        console.log("data", this.state.data);
+        this.forceUpdate();
+        console.log("data in event onClickNew", this.state.data);
       })
       .catch(error => {
         console.log('Fetch Error :-S', error);
       })
   }
 
-  componentWillReceiveProps(nextProps) {
-    console.log("click news", nextProps);
-    var id = nextProps.match.params.id;
-    // this.onNewsClick();
-    const url = `http://localhost:8089/post/tin-tuc/${id}`;
-    fetch(url)
-      .then(response => {
-        if (response.status !== 200) {
-          throw Error(response.statusText);
-        }
-        return response.json();
-      })
-      .then(json => {
-        this.setState({
-          data: json.data
-        });
-        console.log("data", this.state.data);
-      })
-      .catch(error => {
-        console.log('Fetch Error :-S', error);
-      })
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if (!nextProps) {
+  //     console.log("nextProps", nextProps);
+  //     console.log("nextState", nextState);
+  //     var id = nextProps.match.params.id;
+  //     this.onNewsClick(id);
+  //     const url = `http://localhost:8089/post/tin-tuc/${id}`;
+  //   }
+    
+  //   //  return fetch(url)
+  //   //   .then(response => {
+  //   //     if (response.status !== 200) {
+  //   //       throw Error(response.statusText);
+  //   //     }
+  //   //     return response.json();
+  //   //   })
+  //   //   .then(json => {
+  //   //     this.setState({
+  //   //       data: json.data
+  //   //     });
+  //   //     console.log("data", this.state.data);
+  //   //   })
+  //   //   .catch(error => {
+  //   //     console.log('Fetch Error :-S', error);
+  //   //   })
+  // }
+
+  // componentWillUpdate(nextProps, nextState) {
+  //   console.log("nextProps", nextProps);
+  //   console.log("nextState", nextState);
+  //   var id = nextProps.match.params.id;
+  //   // this.onNewsClick();
+  //   const url = `http://localhost:8089/post/tin-tuc/${id}`;
+  //   // return fetch(url)
+  //   //   .then(response => {
+  //   //     if (response.status !== 200) {
+  //   //       throw Error(response.statusText);
+  //   //     }
+  //   //     return response.json();
+  //   //   })
+  //   //   .then(json => {
+  //   //     this.setState({
+  //   //       data: json.data
+  //   //     });
+  //   //     console.log("data", this.state.data);
+  //   //   })
+  //   //   .catch(error => {
+  //   //     console.log('Fetch Error :-S', error);
+  //   //   })
+  // }
+
+  handleOnclickEvent(event) {
+    console.log("vo day chua");
+    event.preventDefault();
+    console.log("vo day chua");
+    const { dataCallback } = this.props;
+    dataCallback("ahihi");
   }
 
   render() {
@@ -166,12 +205,12 @@ class TinTucDetails extends React.Component {
 
             <div className="section background">
               <Container>
-                <TinLienQuan />
+                <TinLienQuan onClick={ this.onNewsClick }/>
               </Container>
             </div>
 
             <div className="section footer mb-0">
-              <Footer onClick={ this.onMenuClick } />
+              <Footer onClick={this.onMenuClick} />
             </div>
           </div>
         </div>

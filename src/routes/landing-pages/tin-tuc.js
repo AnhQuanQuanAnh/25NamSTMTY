@@ -74,8 +74,11 @@ class TinTuc extends Component {
         }
     }
 
+    handleDataCallback(txtMsg) {
+        alert(txtMsg);
+    }
+
     render() {
-        const { messages } = this.props.intl;
         const { data } = this.state;
         const dataList = data.map((item, index) => {
             const image = item.image;
@@ -83,7 +86,7 @@ class TinTuc extends Component {
             return <Colxx key={index} xxs="12" lg="6" className="mb-4">
                 <Card className="flex-row mb-5 listing-card-container">
                     <div className="w-40 position-relative">
-                        <NavLink to={`/tin-tuc/${item.id}`}>
+                        <NavLink to={`/tin-tuc/${item.id}`} dataCallback={ this.handleDataCallback } >
                             <img className="card-img-left" src={`data:image/jpeg;base64,${image}`} alt="Card cap" />
                         </NavLink>
                     </div>

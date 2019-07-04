@@ -32,20 +32,28 @@ export default class TinLienQuan extends React.Component {
             })
     }
 
+    onNewClick() {
+        console.log("object");
+    }
+
+    handleDataCallback(txtMsg) {
+        alert(txtMsg);
+    }
+
     render() {
         const { data } = this.state;
         const dataList = data.map((item, index) => {
             const image = item.image;
 
-            return <NavLink  key={ index } to={`/tin-tuc/${ item.id }`}>
+            return <NavLink key={index} to={`/tin-tuc/${item.id}`} >
                 <div className="pr-3 pl-3 d-flex">
                     <Card>
                         <CardBody className="text-center pt-5 pb-5">
                             <div>
-                                <img className="card-img-left" src={`data:image/jpeg;base64,${ image }`} alt="Card cap" />
-                                <br/>
-                                <br/>
-                                <h5 className="mb-0 font-weight-semibold color-theme-1 mb-3">{ item.title }</h5>
+                                <img className="card-img-left" src={`data:image/jpeg;base64,${image}`} alt="Card cap" />
+                                <br />
+                                <br />
+                                <h5 className="mb-0 font-weight-semibold color-theme-1 mb-3">{item.title}</h5>
                             </div>
                         </CardBody>
                     </Card>
@@ -67,7 +75,7 @@ export default class TinLienQuan extends React.Component {
                             1440: 4
                         }}
                         loop={false}>
-                        { dataList }
+                        {dataList}
                     </ReactSiemaCarousel>
                 </Colxx>
             </Row>
