@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Card, CardBody } from "reactstrap";
 import { Colxx } from "Components/CustomBootstrap";
 import ReactSiemaCarousel from "Components/ReactSiema/ReactSiemaCarousel";
+import TinTucDetails from "router/landing-pages/tintuc-detatils.js";
 import { NavLink } from "react-router-dom";
 
 export default class TinLienQuan extends React.Component {
@@ -40,25 +41,49 @@ export default class TinLienQuan extends React.Component {
         alert(txtMsg);
     }
 
+    onClickShowDetail(id) {
+        console.log("helo");
+        const url = `http://localhost:8089/post/tin-tuc/${id}`;
+        fetch(url)
+            .then(response => {
+                if (response.status !== 200) {
+                    throw Error(response.statusText);
+                }
+                return response.json();
+            })
+            .then(json => {
+                this.setState({
+                    news: json.data
+                });
+                this.forceUpdate();
+                console.log("data in event onClickNew", this.state.data);
+            })
+            .catch(error => {
+                console.log('Fetch Error :-S', error);
+            })
+    }
+
     render() {
         const { data } = this.state;
         const dataList = data.map((item, index) => {
             const image = item.image;
 
-            return <NavLink key={index} to={`/tin-tuc/${item.id}`} >
-                <div className="pr-3 pl-3 d-flex">
-                    <Card>
-                        <CardBody className="text-center pt-5 pb-5">
-                            <div>
-                                <img className="card-img-left" src={`data:image/jpeg;base64,${image}`} alt="Card cap" />
-                                <br />
-                                <br />
-                                <h5 className="mb-0 font-weight-semibold color-theme-1 mb-3">{item.title}</h5>
-                            </div>
-                        </CardBody>
-                    </Card>
-                </div>
-            </NavLink>
+            return <TinTucDetails >
+                <NavLink onClick={() => onClickShowDetail(item.id)} key={index} to={`/tin-tuc/${item.id}`} >
+                    <div className="pr-3 pl-3 d-flex">
+                        <Card>
+                            <CardBody className="text-center pt-5 pb-5">
+                                <div>
+                                    <img className="card-img-left" src={`data:image/jpeg;base64,${image}`} alt="Card cap" />
+                                    <br />
+                                    <br />
+                                    <h5 className="mb-0 font-weight-semibold color-theme-1 mb-3">{item.title}</h5>
+                                </div>
+                            </CardBody>
+                        </Card>
+                    </div>
+                </NavLink>
+            </TinTucDetails>
         });
         return (
             <Row>

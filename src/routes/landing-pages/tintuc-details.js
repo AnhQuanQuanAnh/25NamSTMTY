@@ -33,7 +33,7 @@ class TinTucDetails extends React.Component {
       news: this.emptyObject
     }
     this.onMenuClick = this.onMenuClick.bind(this);
-    this.onNewsClick = this.onNewsClick.bind(this);
+    // this.onNewsClick = this.onNewsClick.bind(this);
     this.handleOnclickEvent = this.handleOnclickEvent.bind(this);
   }
 
@@ -80,10 +80,7 @@ class TinTucDetails extends React.Component {
       })
   }
 
-  onNewsClick(id) {
-    // console.log("click news", id);
-    // var id = this.props.match.params.id;
-    // console.log("id", id);
+   onNewsClick(id) {
     const url = `http://localhost:8089/post/tin-tuc/${id}`;
     fetch(url)
       .then(response => {
@@ -94,7 +91,7 @@ class TinTucDetails extends React.Component {
       })
       .then(json => {
         this.setState({
-          data: json.data
+          news: json.data
         });
         this.forceUpdate();
         console.log("data in event onClickNew", this.state.data);
@@ -166,7 +163,7 @@ class TinTucDetails extends React.Component {
   render() {
     const { news } = this.state;
     const des = news.description;
-    console.log("des", des);
+    console.log("news", news);
     const title = news.title;
     return (
       <Fragment>
@@ -183,7 +180,7 @@ class TinTucDetails extends React.Component {
                 <Container>
                   <Row className="mt-5">
                     <Colxx xxs="12">
-                      <h3>{title}</h3>
+                      <h3>{title} {console.log('data', this.state.news)}</h3>
                     </Colxx>
                     <Colxx xxs="12">
                       <Card>
@@ -205,7 +202,7 @@ class TinTucDetails extends React.Component {
 
             <div className="section background">
               <Container>
-                <TinLienQuan onClick={ this.onNewsClick }/>
+                <TinLienQuan onClick={() => this.onNewsClick(this.props.match.params.id) }/>
               </Container>
             </div>
 
